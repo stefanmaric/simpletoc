@@ -3,6 +3,12 @@ simpletoc
 
 Simple Table of Contents generator for DOM and Markdown. 1.5kb
 
+[![license](https://img.shields.io/github/license/stefanmaric/simpletoc.svg)]()
+[![Travis](https://img.shields.io/travis/stefanmaric/simpletoc.svg)]()
+[![Coveralls](https://img.shields.io/coveralls/stefanmaric/simpletoc.svg)]()
+[![npm](https://img.shields.io/npm/v/simpletoc.svg)]()
+[![npm](https://img.shields.io/npm/dt/simpletoc.svg)]()
+
 ## Some alternatives
 
 * https://github.com/gajus/contents
