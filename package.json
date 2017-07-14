@@ -1,0 +1,7 @@
+{
+  "author": "Stefan Maric <me@stefanmaric.com> (http://stefanmaric.com)",
+  "description": "Simple Table of Contents generator for DOM and Markdown",
+  "license": "MIT",
+  "name": "simpletoc",
+  "version": "0.1.0"
+}
