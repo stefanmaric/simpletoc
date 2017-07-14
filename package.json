@@ -53,5 +53,5 @@
     "lint": "echint && eslint .",
     "test": "npm run lint && tap 'test/**/*.js'"
   },
-  "version": "0.1.1"
+  "version": "0.1.2"
 }
