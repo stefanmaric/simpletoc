@@ -1,7 +1,37 @@
 {
   "author": "Stefan Maric <me@stefanmaric.com> (http://stefanmaric.com)",
   "description": "Simple Table of Contents generator for DOM and Markdown",
+  "devDependencies": {
+    "echint": "^4.0.1",
+    "eslint": "^4.1.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "tap": "^10.7.0"
+  },
+  "echint": {
+    "ignore": [
+      "coverage/**",
+      "dist/**",
+      ".nyc-output/**"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ],
+    "root": true
+  },
+  "eslintIgnore": [
+    "dist/"
+  ],
   "license": "MIT",
   "name": "simpletoc",
+  "scripts": {
+    "lint": "echint && eslint .",
+    "test": "npm run lint && tap 'test/**/*.js'"
+  },
   "version": "0.1.0"
 }
