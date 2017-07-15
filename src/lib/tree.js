@@ -8,8 +8,8 @@ module.exports = tree
  * Creates a tree of nested arrays based on `arr` data and `fn` criteria.
  * Elements are compared against their left neighbour using `fn` which is
  * invoked with these arguments: (current, next). If the invocation returns
- * truthy `next`, will be nested into `current`, `next` will be placed at the
- * same level of`current` otherwise.
+ * truthy, `next` will be nested into `current`, `next` will be placed at the
+ * same level of `current` otherwise.
  *
  * @static
  * @param {Array} arr The array to structure as tree.
