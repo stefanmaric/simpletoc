@@ -46,6 +46,7 @@
     "dist/",
     "_docs/"
   ],
+  "homepage": "http://stefanmaric.com/simpletoc/",
   "keywords": [
     "table of contents",
     "table",
