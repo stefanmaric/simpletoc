@@ -23,6 +23,7 @@
     "eslint-plugin-node": "^5.1.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "gh-pages": "^1.0.0",
     "rollup": "^0.45.1",
     "rollup-plugin-commonjs": "^8.0.2",
     "tap": "^10.7.0"
@@ -68,6 +69,7 @@
     "build-umd": "f(){ BN=$(basename $1 .js); rollup -c rollup.config.js -f umd -n simpletoc $1 | babel -f $1 | tee dist/$BN.umd.js | babili > dist/$BN.umd.min.js; }; f",
     "docs": "documentation build --config .documentation.yml -f html -o _docs src/",
     "lint": "echint && eslint .",
+    "publish-docs": "npm run docs && gh-pages --dist _docs",
     "test": "npm run lint && tap 'test/**/*.js'"
   },
   "version": "0.1.2"
