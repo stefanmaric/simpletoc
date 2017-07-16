@@ -42,6 +42,15 @@
   "eslintIgnore": [
     "dist/"
   ],
+  "keywords": [
+    "table of contents",
+    "table",
+    "contents",
+    "toc",
+    "dom",
+    "markdown",
+    "md"
+  ],
   "license": "MIT",
   "main": "dist/simpletoc.umd.js",
   "module": "dist/simpletoc.esm.js",
