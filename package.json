@@ -69,7 +69,7 @@
     "build-esm": "f(){ BN=$(basename $1 .js); rollup -c rollup.config.js -f es $1 | tee dist/$BN.esm.js | babili > dist/$BN.esm.min.js; }; f",
     "build-umd": "f(){ BN=$(basename $1 .js); rollup -c rollup.config.js -f umd -n simpletoc $1 | babel -f $1 | tee dist/$BN.umd.js | babili > dist/$BN.umd.min.js; }; f",
     "docs": "documentation build --config .documentation.yml -f html -o _docs src/",
-    "lint": "echint && eslint .",
+    "lint": "echint && eslint . && documentation lint src/",
     "publish-docs": "npm run docs && gh-pages --dist _docs",
     "test": "npm run lint && tap 'test/**/*.js'"
   },
