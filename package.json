@@ -55,6 +55,10 @@
   "main": "dist/simpletoc.umd.js",
   "module": "dist/simpletoc.esm.js",
   "name": "simpletoc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stefanmaric/simpletoc.git"
+  },
   "scripts": {
     "build": "for f in src/*.js; do npm run build-umd -- $f && npm run build-esm -- $f; done",
     "build-esm": "f(){ BN=$(basename $1 .js); rollup -c rollup.config.js -f es $1 | tee dist/$BN.esm.js | babili > dist/$BN.esm.min.js; }; f",
