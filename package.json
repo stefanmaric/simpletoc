@@ -15,6 +15,7 @@
     "babel-cli": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babili": "^0.1.4",
+    "documentation": "^4.0.0-rc.1",
     "echint": "^4.0.1",
     "eslint": "^4.1.1",
     "eslint-config-standard": "^10.2.1",
@@ -30,6 +31,7 @@
     "ignore": [
       "coverage/**",
       "dist/**",
+      "_docs/**",
       ".nyc-output/**"
     ]
   },
@@ -40,7 +42,8 @@
     "root": true
   },
   "eslintIgnore": [
-    "dist/"
+    "dist/",
+    "_docs/"
   ],
   "keywords": [
     "table of contents",
@@ -63,6 +66,7 @@
     "build": "for f in src/*.js; do npm run build-umd -- $f && npm run build-esm -- $f; done",
     "build-esm": "f(){ BN=$(basename $1 .js); rollup -c rollup.config.js -f es $1 | tee dist/$BN.esm.js | babili > dist/$BN.esm.min.js; }; f",
     "build-umd": "f(){ BN=$(basename $1 .js); rollup -c rollup.config.js -f umd -n simpletoc $1 | babel -f $1 | tee dist/$BN.umd.js | babili > dist/$BN.umd.min.js; }; f",
+    "docs": "documentation build --config .documentation.yml -f html -o _docs src/",
     "lint": "echint && eslint .",
     "test": "npm run lint && tap 'test/**/*.js'"
   },

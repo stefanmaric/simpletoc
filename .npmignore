@@ -6,3 +6,6 @@ coverage/
 
 # nyc test coverage
 .nyc_output/
+
+# Generated docs folder
+_docs/
