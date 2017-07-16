@@ -3,11 +3,11 @@ simpletoc
 
 Simple Table of Contents generator for DOM and Markdown. 1.5kb
 
-[![license](https://img.shields.io/github/license/stefanmaric/simpletoc.svg)]()
-[![Travis](https://img.shields.io/travis/stefanmaric/simpletoc.svg)]()
-[![Coveralls](https://img.shields.io/coveralls/stefanmaric/simpletoc.svg)]()
-[![npm](https://img.shields.io/npm/v/simpletoc.svg)]()
-[![npm](https://img.shields.io/npm/dt/simpletoc.svg)]()
+[![license](https://img.shields.io/github/license/stefanmaric/simpletoc.svg)](./LICENSE)
+[![Travis](https://img.shields.io/travis/stefanmaric/simpletoc.svg)](https://travis-ci.org/stefanmaric/simpletoc)
+[![Coveralls](https://img.shields.io/coveralls/stefanmaric/simpletoc.svg)](https://coveralls.io/github/stefanmaric/simpletoc)
+[![npm](https://img.shields.io/npm/v/simpletoc.svg)](https://www.npmjs.com/package/simpletoc)
+[![npm](https://img.shields.io/npm/dt/simpletoc.svg)](https://www.npmjs.com/package/simpletoc)
 [![GitHub stars](https://img.shields.io/github/stars/stefanmaric/simpletoc.svg?style=flat-square)](https://github.com/stefanmaric/simpletoc/stargazers)
 
 
