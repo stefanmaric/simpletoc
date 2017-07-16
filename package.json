@@ -24,6 +24,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "gh-pages": "^1.0.0",
+    "jsdom": "^11.1.0",
     "rollup": "^0.45.1",
     "rollup-plugin-commonjs": "^8.0.2",
     "tap": "^10.7.0"
