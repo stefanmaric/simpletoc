@@ -45,7 +45,21 @@
       "airbnb",
       "standard"
     ],
-    "root": true
+    "root": true,
+    "rules": {
+      "max-len": [
+        "error",
+        80,
+        2,
+        {
+          "ignoreComments": false,
+          "ignoreRegExpLiterals": true,
+          "ignoreStrings": true,
+          "ignoreTemplateLiterals": true,
+          "ignoreUrls": true
+        }
+      ]
+    }
   },
   "eslintIgnore": [
     "dist/",
