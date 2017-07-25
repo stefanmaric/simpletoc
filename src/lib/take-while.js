@@ -1,4 +1,3 @@
-'use strict'
 
 module.exports = takeWhile
 
@@ -25,6 +24,6 @@ module.exports = takeWhile
  */
 function takeWhile (fn, arr, i = 0) {
   return i < arr.length && fn(arr[i], i, arr)
-    ? takeWhile(fn, arr, ++i)
+    ? takeWhile(fn, arr, i + 1)
     : arr.slice(0, i)
 }

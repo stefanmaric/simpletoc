@@ -1,5 +1,3 @@
-'use strict'
-
 const domList = require('./lib/dom-list.js')
 const domToc = require('./lib/dom-toc.js')
 const mdList = require('./lib/md-list.js')

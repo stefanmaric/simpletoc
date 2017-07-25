@@ -1,5 +1,3 @@
-'use strict'
-
 const takeWhile = require('./take-while.js')
 
 module.exports = tree

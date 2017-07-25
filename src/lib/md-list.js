@@ -1,4 +1,3 @@
-'use strict'
 
 module.exports = mdList
 
@@ -11,7 +10,8 @@ module.exports = mdList
  * @param {Object} [options] Options object.
  * @param {string} [options.type='ol'] Type of list to use, ordered or unordered.
  * @param {Function} [options.getRef] Function to generate a markdown reference.
- * @param {Function} [options.getText] Function to generate the display text of the reference.
+ * @param {Function} [options.getText] Function to generate the display text of
+ * the reference.
  * @param {number} [depth=0] Initial level of indentation.
  * @returns {string} A new markdown list.
  * @example
@@ -42,7 +42,11 @@ module.exports = mdList
  * //         * [Fifth](#fifth)"
  */
 function mdList (tree, options = {}, depth = 0) {
-  const { getRef = _getRef, getText = _getText, type = 'ol' } = options
+  const {
+    getRef = defaultGetRef,
+    getText = defaultGetText,
+    type = 'ol'
+  } = options
 
   return tree
     .reduce((acc, [el, children], i) => {
@@ -73,13 +77,13 @@ function mdList (tree, options = {}, depth = 0) {
  * @return {string} Heading's text ready to be used as ref text.
  * @example
  *
- * _getText('## This is a heading')
+ * defaultGetText('## This is a heading')
  * // => "This is a heading"
  *
- * _getText('## This is [a link](http://example.com) inside a heading')
+ * defaultGetText('## This is [a link](http://example.com) inside a heading')
  * // => "This is a link inside a heading"
  */
-function _getText (line) {
+function defaultGetText (line) {
   // Strip away the heading markup,
   // and also strip away any link markup because nested links are not possible
   return line.replace(/^#+ +/, '').replace(/\[(.+?)\]\(.+?\)/, '$1')
@@ -95,13 +99,13 @@ function _getText (line) {
  * @return {string} A markdown reference.
  * @example
  *
- * _getRef('This is a heading text')
+ * defaultGetRef('This is a heading text')
  * // => "this-is-a-heading-text"
  *
- * _getRef('This is a heading text with $ sign and ! mark.')
+ * defaultGetRef('This is a heading text with $ sign and ! mark.')
  * // => "this-is-a-heading-text-with--sign-and--mark"
  */
-function _getRef (text) {
+function defaultGetRef (text) {
   // This pretty much matches how github generates its headings references
   return text.trim().toLowerCase().replace(/[^\w\- ]+/g, '').replace(/\s/g, '-')
 }

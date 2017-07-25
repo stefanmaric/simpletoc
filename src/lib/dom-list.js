@@ -1,4 +1,3 @@
-'use strict'
 
 module.exports = domList
 
@@ -12,7 +11,8 @@ module.exports = domList
  * @param {string} [options.type='ol'] Type of DOM element to use.
  * @param {string|Array} [options.className='simpletoc'] Class(es) for the list.
  * @param {Function} [options.getId] Function to generate an id.
- * @param {Function} [options.getAnchor] Function to generate an anchor DOM element.
+ * @param {Function} [options.getAnchor] Function to generate an anchor DOM
+ * element.
  * @returns {HTMLElement} A new HTMLUListElement.
  * @example
  *
@@ -44,8 +44,8 @@ function domList (tree, options = {}) {
   const {
     type = 'ol',
     className = 'simpletoc',
-    getId = _getId,
-    getAnchor = _getAnchor
+    getId = defaultGetId,
+    getAnchor = defaultGetAnchor
   } = options
 
   const list = document.createElement(type)
@@ -55,6 +55,9 @@ function domList (tree, options = {}) {
   return tree.reduce((acc, [el, children]) => {
     const li = document.createElement('li')
 
+    // Required override of eslint-config-airbnb for DOM manipulation.
+    // See: https://github.com/airbnb/javascript/issues/766
+    // eslint-disable-next-line no-param-reassign
     el.id = getId(el, children)
 
     li.appendChild(getAnchor(el, children))
@@ -83,15 +86,15 @@ function domList (tree, options = {}) {
  *   .createContextualFragment('<h1>This is a Heading</h1>')
  *   .firstElementChild
  *
- * _getId(heading)
+ * defaultGetId(heading)
  * //=> "this-is-a-heading"
  *
  * heading.id = 'custom-id'
  *
- * _getId(heading)
+ * defaultGetId(heading)
  * // => "custom-id"
  */
-function _getId (el) {
+function defaultGetId (el) {
   return el.id ? el.id : el.textContent.toLowerCase().replace(/\s+/g, '-')
 }
 
@@ -110,13 +113,13 @@ function _getId (el) {
  *   .createContextualFragment('<h1 id="custom-id">This is a Heading</h1>')
  *   .firstElementChild
  *
- * _getAnchor(heading)
+ * defaultGetAnchor(heading)
  * // => <a href="#custom-id">This is a Heading</a>
  */
-function _getAnchor (el) {
+function defaultGetAnchor (el) {
   const a = document.createElement('a')
 
-  a.href = '#' + el.id
+  a.href = `#${el.id}`
   a.textContent = el.textContent
 
   return a

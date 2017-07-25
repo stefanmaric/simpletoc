@@ -1,5 +1,3 @@
-'use strict'
-
 const domList = require('../src/lib/dom-list.js')
 const jsdom = require('jsdom')
 const test = require('tap').test
@@ -14,7 +12,7 @@ function createFragment (html) {
   return jsdom.JSDOM.fragment(html).firstChild
 }
 
-test('domList should convert a tree of DOM elements into an HTML ordered list', t => {
+test('domList should convert a tree of DOM elements into an HTML ordered list', (t) => {
   const tree = [
     [
       createFragment('<h1 id="1">First</h1>'),
@@ -32,7 +30,7 @@ test('domList should convert a tree of DOM elements into an HTML ordered list', 
   t.end()
 })
 
-test('domList should generate ids for elements that does not have it already', t => {
+test('domList should generate ids for elements that does not have it already', (t) => {
   const tree = [
     [createFragment('<h1>First</h1>')],
     [createFragment('<h2>Second</h2>')],

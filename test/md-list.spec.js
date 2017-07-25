@@ -1,9 +1,7 @@
-'use strict'
-
 const test = require('tap').test
 const mdList = require('../src/lib/md-list.js')
 
-test('mdList should generate a markdown list given a tree', t => {
+test('mdList should generate a markdown list given a tree', (t) => {
   const src = [['# First'], ['# Second'], ['# Third']]
 
   const expected = [
@@ -18,7 +16,7 @@ test('mdList should generate a markdown list given a tree', t => {
   t.end()
 })
 
-test('mdList should create nested list if the tree is nested', t => {
+test('mdList should create nested list if the tree is nested', (t) => {
   const src = [['# First', [['## Second', [['### Third']]]]]]
 
   const expected = [
@@ -33,7 +31,7 @@ test('mdList should create nested list if the tree is nested', t => {
   t.end()
 })
 
-test('mdList should use bullets if the type is ul', t => {
+test('mdList should use bullets if the type is ul', (t) => {
   const src = [['# First'], ['# Second'], ['# Third']]
 
   const expected = [

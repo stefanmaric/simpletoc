@@ -1,9 +1,7 @@
-'use strict'
-
 const test = require('tap').test
 const mdToc = require('../src/lib/md-toc.js')
 
-test('mdToc should, by default, replace lines that contain no more than "TOC"', t => {
+test('mdToc should, by default, replace lines that contain no more than "TOC"', (t) => {
   const src = 'TOC'
   const expected = ''
   const result = mdToc(src)
@@ -12,7 +10,7 @@ test('mdToc should, by default, replace lines that contain no more than "TOC"', 
   t.end()
 })
 
-test('mdToc should replace text that matches the target regex, if given', t => {
+test('mdToc should replace text that matches the target regex, if given', (t) => {
   const src = 'Lorem ipsum dolor sit amet'
   const expected = 'Lorem ipsum  sit amet'
   const result = mdToc(src, { target: /dolor/ })
@@ -21,7 +19,7 @@ test('mdToc should replace text that matches the target regex, if given', t => {
   t.end()
 })
 
-test('mdToc should generate a table of contents and replace the TOC line with it', t => {
+test('mdToc should generate a table of contents and replace the TOC line with it', (t) => {
   const src = `
 
 TOC
