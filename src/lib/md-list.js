@@ -8,7 +8,8 @@ module.exports = mdList
  * @static
  * @param {Array} tree Array of nested arrays representing a tree.
  * @param {Object} [options] Options object.
- * @param {string} [options.type='ol'] Type of list to use, ordered or unordered.
+ * @param {string} [options.type='ol'] Type of list to use, ordered or
+ * unordered.
  * @param {Function} [options.getRef] Function to generate a markdown reference.
  * @param {Function} [options.getText] Function to generate the display text of
  * the reference.
