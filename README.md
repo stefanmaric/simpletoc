@@ -63,6 +63,7 @@ Or grab a copy from the `dist/` folder – there's no CDN available at the momen
 * https://github.com/aslushnikov/table-of-contents-preprocessor
 * https://github.com/Oktavilla/markdown-it-table-of-contents
 * https://github.com/gajus/markdown-contents
+* https://github.com/thlorenz/doctoc
 
 
 ## Contributing
