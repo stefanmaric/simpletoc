@@ -7,6 +7,7 @@ Simple Table of Contents generator for DOM and Markdown. 1.5kb
 [![Travis](https://img.shields.io/travis/stefanmaric/simpletoc.svg)](https://travis-ci.org/stefanmaric/simpletoc)
 [![Coveralls](https://img.shields.io/coveralls/stefanmaric/simpletoc.svg)](https://coveralls.io/github/stefanmaric/simpletoc)
 [![npm](https://img.shields.io/npm/v/simpletoc.svg)](https://www.npmjs.com/package/simpletoc)
+[![Greenkeeper badge](https://badges.greenkeeper.io/stefanmaric/simpletoc.svg)](https://greenkeeper.io/)
 [![npm](https://img.shields.io/npm/dt/simpletoc.svg)](https://www.npmjs.com/package/simpletoc)
 [![GitHub stars](https://img.shields.io/github/stars/stefanmaric/simpletoc.svg?style=flat-square)](https://github.com/stefanmaric/simpletoc/stargazers)
 
