@@ -1,7 +1,6 @@
 simpletoc
 =========
 
-
 Simple Table of Contents generator for DOM and Markdown. 1.5kb
 
 [![license](https://img.shields.io/github/license/stefanmaric/simpletoc.svg)](./LICENSE)
