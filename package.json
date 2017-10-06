@@ -65,11 +65,6 @@
     "dist/",
     "_docs/"
   ],
-  "greenkeeper": {
-    "ignore": [
-      "eslint-plugin-jsx-a11y"
-    ]
-  },
   "homepage": "http://stefanmaric.com/simpletoc/",
   "keywords": [
     "table of contents",
