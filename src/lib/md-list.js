@@ -107,5 +107,9 @@ function defaultGetText (line) {
  */
 function defaultGetRef (text) {
   // This pretty much matches how github generates its headings references
-  return text.trim().toLowerCase().replace(/[^\w\- ]+/g, '').replace(/\s/g, '-')
+  return text
+    .trim()
+    .toLowerCase()
+    .replace(/[^\w\- ]+/g, '')
+    .replace(/\s/g, '-')
 }

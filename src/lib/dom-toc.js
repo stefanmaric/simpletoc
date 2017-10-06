@@ -39,15 +39,13 @@ function domToc (options = {}) {
     target = '[simpletoc]'
   } = options
 
-  return removeChildren(document.querySelector(target)).appendChild(
-    domList(
-      tree(
-        Array.from(document.querySelector(root).querySelectorAll(selector)),
-        compare
-      ),
-      options
-    )
-  )
+  return removeChildren(document.querySelector(target)).appendChild(domList(
+    tree(
+      Array.from(document.querySelector(root).querySelectorAll(selector)),
+      compare
+    ),
+    options
+  ))
 }
 
 /**

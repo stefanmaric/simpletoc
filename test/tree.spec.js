@@ -1,4 +1,4 @@
-const test = require('tap').test
+const { test } = require('tap')
 const tree = require('../src/lib/tree.js')
 
 function lexHeadingCompare (current, next) {
