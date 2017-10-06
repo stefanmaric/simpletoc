@@ -1,6 +1,6 @@
 const domList = require('../src/lib/dom-list.js')
 const jsdom = require('jsdom')
-const test = require('tap').test
+const { test } = require('tap')
 
 // Prepare environment for DOM testing
 const dom = new jsdom.JSDOM()

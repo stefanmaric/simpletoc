@@ -1,4 +1,4 @@
-const test = require('tap').test
+const { test } = require('tap')
 const mdList = require('../src/lib/md-list.js')
 
 test('mdList should generate a markdown list given a tree', (t) => {
