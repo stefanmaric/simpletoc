@@ -28,7 +28,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "gh-pages": "^1.0.0",
     "jsdom": "^11.3.0",
-    "rollup": "^0.50.0",
+    "rollup": "^0.51.0",
     "rollup-plugin-commonjs": "^8.2.1",
     "tap": "^10.7.2"
   },
