@@ -30,7 +30,7 @@
     "jsdom": "^11.3.0",
     "rollup": "^0.51.1",
     "rollup-plugin-commonjs": "^8.2.1",
-    "tap": "^10.7.2"
+    "tap": "^11.0.0"
   },
   "echint": {
     "ignore": [
