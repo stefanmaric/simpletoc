@@ -7,8 +7,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
 
 (function (global, factory) {
-  (typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' ? module.exports = factory() : typeof define === 'function' && define.amd ? define(factory) : global.simpletoc = factory();
-})(this, function () {
+  (typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' ? factory(exports) : typeof define === 'function' && define.amd ? define(['exports'], factory) : factory(global.simpletoc = {});
+})(this, function (exports) {
   'use strict';
 
   var domList_1 = domList;
@@ -530,7 +530,19 @@ function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
     mdToc: mdToc_1,
     tree: tree_1
   };
+  var simpletoc_1 = simpletoc.domList;
+  var simpletoc_2 = simpletoc.domToc;
+  var simpletoc_3 = simpletoc.mdList;
+  var simpletoc_4 = simpletoc.mdToc;
+  var simpletoc_5 = simpletoc.tree;
 
-  return simpletoc;
+  exports.default = simpletoc;
+  exports.domList = simpletoc_1;
+  exports.domToc = simpletoc_2;
+  exports.mdList = simpletoc_3;
+  exports.mdToc = simpletoc_4;
+  exports.tree = simpletoc_5;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
 });
 

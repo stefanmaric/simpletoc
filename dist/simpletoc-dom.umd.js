@@ -7,8 +7,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
 
 (function (global, factory) {
-  (typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' ? module.exports = factory() : typeof define === 'function' && define.amd ? define(factory) : global.simpletoc = factory();
-})(this, function () {
+  (typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' ? factory(exports) : typeof define === 'function' && define.amd ? define(['exports'], factory) : factory(global.simpletoc = {});
+})(this, function (exports) {
   'use strict';
 
   var domList_1 = domList;
@@ -282,7 +282,15 @@ function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
     domToc: domToc_1,
     tree: tree_1
   };
+  var simpletocDom_1 = simpletocDom.domList;
+  var simpletocDom_2 = simpletocDom.domToc;
+  var simpletocDom_3 = simpletocDom.tree;
 
-  return simpletocDom;
+  exports.default = simpletocDom;
+  exports.domList = simpletocDom_1;
+  exports.domToc = simpletocDom_2;
+  exports.tree = simpletocDom_3;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
 });
 
