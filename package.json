@@ -17,7 +17,7 @@
     "gh-pages": "^1.0.0",
     "jsdom": "^11.3.0",
     "rollup": "^0.56.4",
-    "rollup-plugin-commonjs": "^8.2.1",
+    "rollup-plugin-commonjs": "^9.0.0",
     "tap": "^11.0.0"
   },
   "echint": {
