@@ -9,9 +9,9 @@
     "echint": "^4.0.1",
     "eslint": "^4.8.0",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.6.1",
-    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "gh-pages": "^1.0.0",
@@ -28,31 +28,6 @@
       ".nyc-output/**"
     ]
   },
-  "eslintConfig": {
-    "extends": [
-      "airbnb-base",
-      "standard"
-    ],
-    "root": true,
-    "rules": {
-      "max-len": [
-        "error",
-        80,
-        2,
-        {
-          "ignoreComments": false,
-          "ignoreRegExpLiterals": true,
-          "ignoreStrings": true,
-          "ignoreTemplateLiterals": true,
-          "ignoreUrls": true
-        }
-      ]
-    }
-  },
-  "eslintIgnore": [
-    "dist/",
-    "_docs/"
-  ],
   "homepage": "http://stefanmaric.com/simpletoc/",
   "keywords": [
     "table of contents",
