@@ -55,5 +55,5 @@
     "publish-docs": "npm run docs && gh-pages --dist _docs",
     "test": "npm run lint && tap 'test/**/*.js'"
   },
-  "version": "0.5.0"
+  "version": "0.6.0"
 }
