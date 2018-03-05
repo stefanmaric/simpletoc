@@ -310,5 +310,9 @@ var simpletocMd = {
   mdToc: mdToc_1,
   tree: tree_1
 };
+var simpletocMd_1 = simpletocMd.mdList;
+var simpletocMd_2 = simpletocMd.mdToc;
+var simpletocMd_3 = simpletocMd.tree;
 
 export default simpletocMd;
+export { simpletocMd_1 as mdList, simpletocMd_2 as mdToc, simpletocMd_3 as tree };

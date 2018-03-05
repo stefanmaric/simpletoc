@@ -258,5 +258,9 @@ var simpletocDom = {
   domToc: domToc_1,
   tree: tree_1
 };
+var simpletocDom_1 = simpletocDom.domList;
+var simpletocDom_2 = simpletocDom.domToc;
+var simpletocDom_3 = simpletocDom.tree;
 
 export default simpletocDom;
+export { simpletocDom_1 as domList, simpletocDom_2 as domToc, simpletocDom_3 as tree };
