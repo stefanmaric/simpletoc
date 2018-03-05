@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>simpletoc 0.5.0 | Documentation</title>
+  <title>simpletoc 0.6.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>simpletoc</h3>
-          <div class='mb1'><code>0.5.0</code></div>
+          <div class='mb1'><code>0.6.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -270,7 +270,7 @@
 the DOM elements.</p>
 
 
-  <div class='pre p1 fill-light mt0'>domList(tree: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?): <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTMLElement</a></div>
+  <div class='pre p1 fill-light mt0'>domList(tree: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?): <a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></div>
   
   
 
@@ -287,7 +287,7 @@ the DOM elements.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>tree</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+            <span class='code bold'>tree</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
 	    Array of nested arrays representing a tree.
 
           </div>
@@ -296,7 +296,7 @@ the DOM elements.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
             = <code>{}</code>)</code>
 	    Options object.
 
@@ -316,37 +316,45 @@ the DOM elements.</p>
             <tbody class='mt1'>
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>options.type</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
-                  
-                    (default <code>&#39;ol&#39;</code>)
-                  </td>
-                  <td class='break-word'><span>Type of DOM element to use.
+  <td class='break-word'><span class='code bold'>options.type</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  
+    (default <code>&#39;ol&#39;</code>)
+  </td>
+  <td class='break-word'><span>Type of DOM element to use.
 </span></td>
-                </tr>
+</tr>
+
+
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>options.className</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
-                  
-                    (default <code>&#39;simpletoc&#39;</code>)
-                  </td>
-                  <td class='break-word'><span>Class(es) for the list.
+  <td class='break-word'><span class='code bold'>options.className</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+  
+    (default <code>&#39;simpletoc&#39;</code>)
+  </td>
+  <td class='break-word'><span>Class(es) for the list.
 </span></td>
-                </tr>
+</tr>
+
+
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>options.getId</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
-                  </td>
-                  <td class='break-word'><span>Function to generate an id.
+  <td class='break-word'><span class='code bold'>options.getId</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
+  </td>
+  <td class='break-word'><span>Function to generate an id.
 </span></td>
-                </tr>
+</tr>
+
+
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>options.getAnchor</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
-                  </td>
-                  <td class='break-word'><span>Function to generate an anchor DOM
+  <td class='break-word'><span class='code bold'>options.getAnchor</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
+  </td>
+  <td class='break-word'><span>Function to generate an anchor DOM
 element.
 </span></td>
-                </tr>
+</tr>
+
+
               
             </tbody>
           </table>
@@ -361,7 +369,7 @@ element.
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTMLElement</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></code>:
         A new HTMLUListElement.
 
       
@@ -420,7 +428,7 @@ domList(tree)
 textContent.</p>
 
 
-  <div class='pre p1 fill-light mt0'>defaultGetId(el: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTMLElement</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  <div class='pre p1 fill-light mt0'>defaultGetId(el: <a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
   
   
 
@@ -437,7 +445,7 @@ textContent.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>el</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTMLElement</a>)</code>
+            <span class='code bold'>el</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a>)</code>
 	    The DOM element.
 
           </div>
@@ -452,7 +460,7 @@ textContent.</p>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
         An id.
 
       
@@ -505,7 +513,7 @@ defaultGetId(heading)
   <p>Given an DOM element, returns a new anchor element that points to <code>el</code>'s id.</p>
 
 
-  <div class='pre p1 fill-light mt0'>defaultGetAnchor(el: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTMLElement</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTMLElement</a></div>
+  <div class='pre p1 fill-light mt0'>defaultGetAnchor(el: <a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a>): <a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></div>
   
   
 
@@ -522,7 +530,7 @@ defaultGetId(heading)
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>el</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTMLElement</a>)</code>
+            <span class='code bold'>el</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a>)</code>
 	    The DOM element.
 
           </div>
@@ -537,7 +545,7 @@ defaultGetId(heading)
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTMLElement</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></code>:
         A new anchor element.
 
       
@@ -600,7 +608,7 @@ document and (optional) CSS selectors, and attach it somewhere in the DOM
 (by default to an element with the "simpletoc" attribute).</p>
 
 
-  <div class='pre p1 fill-light mt0'>domToc(options: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?): <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTMLElement</a></div>
+  <div class='pre p1 fill-light mt0'>domToc(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?): <a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></div>
   
   
 
@@ -617,7 +625,7 @@ document and (optional) CSS selectors, and attach it somewhere in the DOM
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
             = <code>{}</code>)</code>
 	    Options object.
 
@@ -637,42 +645,50 @@ document and (optional) CSS selectors, and attach it somewhere in the DOM
             <tbody class='mt1'>
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>options.compare</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
-                  </td>
-                  <td class='break-word'><span>Function used to compare hierarchy of
+  <td class='break-word'><span class='code bold'>options.compare</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
+  </td>
+  <td class='break-word'><span>Function used to compare hierarchy of
 heading elements.
 </span></td>
-                </tr>
+</tr>
+
+
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>options.root</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
-                  
-                    (default <code>&#39;body&#39;</code>)
-                  </td>
-                  <td class='break-word'><span>CSS selector to scope the search of
+  <td class='break-word'><span class='code bold'>options.root</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  
+    (default <code>&#39;body&#39;</code>)
+  </td>
+  <td class='break-word'><span>CSS selector to scope the search of
 headings.
 </span></td>
-                </tr>
+</tr>
+
+
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>options.selector</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
-                  
-                    (default <code>&#39;h1,h2,h3,h4,h5,h6&#39;</code>)
-                  </td>
-                  <td class='break-word'><span>CSS selector to search
+  <td class='break-word'><span class='code bold'>options.selector</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  
+    (default <code>&#39;h1,h2,h3,h4,h5,h6&#39;</code>)
+  </td>
+  <td class='break-word'><span>CSS selector to search
 for headings.
 </span></td>
-                </tr>
+</tr>
+
+
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>options.target</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
-                  
-                    (default <code>&#39;[simpletoc]&#39;</code>)
-                  </td>
-                  <td class='break-word'><span>CSS selector to seach for the
+  <td class='break-word'><span class='code bold'>options.target</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  
+    (default <code>&#39;[simpletoc]&#39;</code>)
+  </td>
+  <td class='break-word'><span>CSS selector to seach for the
 element where the TOC is going to be attached.
 </span></td>
-                </tr>
+</tr>
+
+
               
             </tbody>
           </table>
@@ -687,7 +703,7 @@ element where the TOC is going to be attached.
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTMLElement</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></code>:
         A new HTMLUListElement generated by 
 <a href="#domlist">#domlist</a>
 .
@@ -741,7 +757,7 @@ element where the TOC is going to be attached.
 point to those headings.</p>
 
 
-  <div class='pre p1 fill-light mt0'>mdList(tree: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?, depth: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  <div class='pre p1 fill-light mt0'>mdList(tree: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?, depth: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
   
   
 
@@ -758,7 +774,7 @@ point to those headings.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>tree</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+            <span class='code bold'>tree</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
 	    Array of nested arrays representing a tree.
 
           </div>
@@ -767,7 +783,7 @@ point to those headings.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
             = <code>{}</code>)</code>
 	    Options object.
 
@@ -787,29 +803,35 @@ point to those headings.</p>
             <tbody class='mt1'>
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>options.type</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
-                  
-                    (default <code>&#39;ol&#39;</code>)
-                  </td>
-                  <td class='break-word'><span>Type of list to use, ordered or
+  <td class='break-word'><span class='code bold'>options.type</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  
+    (default <code>&#39;ol&#39;</code>)
+  </td>
+  <td class='break-word'><span>Type of list to use, ordered or
 unordered.
 </span></td>
-                </tr>
+</tr>
+
+
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>options.getRef</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
-                  </td>
-                  <td class='break-word'><span>Function to generate a markdown reference.
+  <td class='break-word'><span class='code bold'>options.getRef</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
+  </td>
+  <td class='break-word'><span>Function to generate a markdown reference.
 </span></td>
-                </tr>
+</tr>
+
+
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>options.getText</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
-                  </td>
-                  <td class='break-word'><span>Function to generate the display text of
+  <td class='break-word'><span class='code bold'>options.getText</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
+  </td>
+  <td class='break-word'><span>Function to generate the display text of
 the reference.
 </span></td>
-                </tr>
+</tr>
+
+
               
             </tbody>
           </table>
@@ -818,7 +840,7 @@ the reference.
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>depth</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            <span class='code bold'>depth</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
             = <code>0</code>)</code>
 	    Initial level of indentation.
 
@@ -834,7 +856,7 @@ the reference.
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
         A new markdown list.
 
       
@@ -894,7 +916,7 @@ mdList(tree, { <span class="hljs-attr">type</span>: <span class="hljs-string">'u
 as a reference text.</p>
 
 
-  <div class='pre p1 fill-light mt0'>defaultGetText(line: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  <div class='pre p1 fill-light mt0'>defaultGetText(line: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
   
   
 
@@ -911,7 +933,7 @@ as a reference text.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>line</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+            <span class='code bold'>line</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
 	    Markdown heading.
 
           </div>
@@ -926,7 +948,7 @@ as a reference text.</p>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
         Heading's text ready to be used as ref text.
 
       
@@ -973,7 +995,7 @@ defaultGetText(<span class="hljs-string">'## This is [a link](http://example.com
 Github Flavored Markdown.</p>
 
 
-  <div class='pre p1 fill-light mt0'>defaultGetRef(text: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  <div class='pre p1 fill-light mt0'>defaultGetRef(text: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
   
   
 
@@ -990,7 +1012,7 @@ Github Flavored Markdown.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>text</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+            <span class='code bold'>text</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
 	    Heading text to parse.
 
           </div>
@@ -1005,7 +1027,7 @@ Github Flavored Markdown.</p>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
         A markdown reference.
 
       
@@ -1065,7 +1087,7 @@ defaultGetRef(<span class="hljs-string">'This is a heading text with $ sign and 
 document.</p>
 
 
-  <div class='pre p1 fill-light mt0'>mdToc(text: any, options: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  <div class='pre p1 fill-light mt0'>mdToc(text: any, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
   
   
 
@@ -1090,7 +1112,7 @@ document.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
             = <code>{}</code>)</code>
 	    Options object.
 
@@ -1110,30 +1132,36 @@ document.</p>
             <tbody class='mt1'>
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>options.compare</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
-                  </td>
-                  <td class='break-word'><span>Function used to compare hierarchy of
+  <td class='break-word'><span class='code bold'>options.compare</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
+  </td>
+  <td class='break-word'><span>Function used to compare hierarchy of
 headings.
 </span></td>
-                </tr>
+</tr>
+
+
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>options.extract</span> <code class='quiet'>Funtion?</code>
-                  </td>
-                  <td class='break-word'><span>Function used to extract headings from the
+  <td class='break-word'><span class='code bold'>options.extract</span> <code class='quiet'>Funtion?</code>
+  </td>
+  <td class='break-word'><span>Function used to extract headings from the
 
 <code>text</code>
 .
 </span></td>
-                </tr>
+</tr>
+
+
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>options.target</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a>?</code>
-                  </td>
-                  <td class='break-word'><span>Regex to seach for text to be replaced with
+  <td class='break-word'><span class='code bold'>options.target</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a>?</code>
+  </td>
+  <td class='break-word'><span>Regex to seach for text to be replaced with
 the table of contents.
 </span></td>
-                </tr>
+</tr>
+
+
               
             </tbody>
           </table>
@@ -1148,7 +1176,7 @@ the table of contents.
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
         The input 
 <code>text</code>
  with a new markdown list generated by
@@ -1226,7 +1254,7 @@ mdToc(mdText)
   <p>Extract headings from a markdown text.</p>
 
 
-  <div class='pre p1 fill-light mt0'>defaultExtract(text: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, pattern: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a>?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  <div class='pre p1 fill-light mt0'>defaultExtract(text: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, pattern: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a>?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
   
   
 
@@ -1243,7 +1271,7 @@ mdToc(mdText)
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>text</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+            <span class='code bold'>text</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
 	    Markdown text.
 
           </div>
@@ -1252,7 +1280,7 @@ mdToc(mdText)
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>pattern</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a>?
+            <span class='code bold'>pattern</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a>?
             = <code>/^#+ .*$/gm</code>)</code>
 	    Regex to search for headings.
 
@@ -1268,7 +1296,7 @@ mdToc(mdText)
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
         Array of headings found in 
 <code>text</code>
 .
@@ -1330,7 +1358,7 @@ defaultExtract(mdText, /^##+ .*$/gm)
   <p>Compare two markdown headings.</p>
 
 
-  <div class='pre p1 fill-light mt0'>defaultCompare(current: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, next: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  <div class='pre p1 fill-light mt0'>defaultCompare(current: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, next: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
   
 
@@ -1347,7 +1375,7 @@ defaultExtract(mdText, /^##+ .*$/gm)
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>current</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+            <span class='code bold'>current</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
 	    First markdown heading
 
           </div>
@@ -1356,7 +1384,7 @@ defaultExtract(mdText, /^##+ .*$/gm)
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>next</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+            <span class='code bold'>next</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
 	    Second markdown heading
 
           </div>
@@ -1371,7 +1399,7 @@ defaultExtract(mdText, /^##+ .*$/gm)
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
         true if 
 <code>next</code>
  has lower hierarchy than 
@@ -1439,7 +1467,7 @@ truthy, <code>next</code> will be nested into <code>current</code>, <code>next</
 same level of <code>current</code> otherwise.</p>
 
 
-  <div class='pre p1 fill-light mt0'>tree(arr: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  <div class='pre p1 fill-light mt0'>tree(arr: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, fn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
   
   
 
@@ -1456,7 +1484,7 @@ same level of <code>current</code> otherwise.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>arr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+            <span class='code bold'>arr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
 	    The array to structure as tree.
 
           </div>
@@ -1475,16 +1503,20 @@ same level of <code>current</code> otherwise.</p>
             <tbody class='mt1'>
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>arr.0</span> <code class='quiet'>any</code>
-                  </td>
-                  <td class='break-word'><span></span></td>
-                </tr>
+  <td class='break-word'><span class='code bold'>arr.0</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
               
                 <tr>
-                  <td class='break-word'><span class='code bold'>arr.rest</span> <code class='quiet'>...any</code>
-                  </td>
-                  <td class='break-word'><span></span></td>
-                </tr>
+  <td class='break-word'><span class='code bold'>arr.rest</span> <code class='quiet'>...any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
               
             </tbody>
           </table>
@@ -1493,7 +1525,7 @@ same level of <code>current</code> otherwise.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
 	    The function invoked per item in the array.
 
           </div>
@@ -1508,7 +1540,7 @@ same level of <code>current</code> otherwise.</p>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
         Returns an array of arrays representing the tree.
 
       
