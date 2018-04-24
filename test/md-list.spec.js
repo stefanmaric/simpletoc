@@ -1,5 +1,7 @@
-const { test } = require('tap')
-const mdList = require('../src/lib/md-list.js')
+import tap from 'tap'
+import mdList from '../src/lib/md-list'
+
+const { test } = tap
 
 test('mdList should generate a markdown list given a tree', (t) => {
   const src = [['# First'], ['# Second'], ['# Third']]

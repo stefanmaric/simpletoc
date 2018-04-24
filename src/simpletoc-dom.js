@@ -1,8 +1,8 @@
-const domList = require('./lib/dom-list.js')
-const domToc = require('./lib/dom-toc.js')
-const tree = require('./lib/tree.js')
+import domList from './lib/dom-list'
+import domToc from './lib/dom-toc'
+import tree from './lib/tree'
 
-module.exports = {
+export {
   domList,
   domToc,
   tree

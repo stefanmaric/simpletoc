@@ -1,7 +1,5 @@
-const mdList = require('./md-list.js')
-const tree = require('./tree.js')
-
-module.exports = mdToc
+import mdList from './md-list'
+import tree from './tree'
 
 /**
  * Handy function to automagically generate a table of contents for a markdown
@@ -123,3 +121,5 @@ function defaultCompare (current, next) {
   const pattern = /^#+/
   return next.match(pattern)[0] > current.match(pattern)[0]
 }
+
+export default mdToc

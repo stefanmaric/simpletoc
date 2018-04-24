@@ -1,5 +1,7 @@
-const { test } = require('tap')
-const mdToc = require('../src/lib/md-toc.js')
+import tap from 'tap'
+import mdToc from '../src/lib/md-toc'
+
+const { test } = tap
 
 test('mdToc should, by default, replace lines that contain no more than "TOC"', (t) => {
   const src = 'TOC'

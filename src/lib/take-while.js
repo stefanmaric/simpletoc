@@ -1,5 +1,3 @@
-module.exports = takeWhile
-
 /**
  * Creates a slice of `arr` with elements taken from the beginning. Elements are
  * taken until `predicate` returns falsey. The predicate is invoked with three
@@ -26,3 +24,5 @@ function takeWhile (fn, arr, i = 0) {
     ? takeWhile(fn, arr, i + 1)
     : arr.slice(0, i)
 }
+
+export default takeWhile

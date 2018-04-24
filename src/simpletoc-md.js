@@ -1,8 +1,8 @@
-const mdList = require('./lib/md-list.js')
-const mdToc = require('./lib/md-toc.js')
-const tree = require('./lib/tree.js')
+import mdList from './lib/md-list'
+import mdToc from './lib/md-toc'
+import tree from './lib/tree'
 
-module.exports = {
+export {
   mdList,
   mdToc,
   tree

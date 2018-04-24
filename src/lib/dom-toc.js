@@ -1,7 +1,5 @@
-const tree = require('./tree.js')
-const domList = require('./dom-list.js')
-
-module.exports = domToc
+import tree from './tree'
+import domList from './dom-list'
 
 /**
  * Handy function to automagically generate a table of contents based on the
@@ -61,3 +59,5 @@ function removeChildren (el) {
   while (el.lastChild) el.removeChild(el.lastChild)
   return el
 }
+
+export default domToc

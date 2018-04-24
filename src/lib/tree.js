@@ -1,6 +1,4 @@
-const takeWhile = require('./take-while.js')
-
-module.exports = tree
+import takeWhile from './take-while'
 
 /**
  * Creates a tree of nested arrays based on `arr` data and `fn` criteria.
@@ -38,3 +36,5 @@ function tree ([current, ...rest], fn) {
     ? [result, ...tree(rest.slice(children.length), fn)]
     : [result]
 }
+
+export default tree

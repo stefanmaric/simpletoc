@@ -1,5 +1,3 @@
-module.exports = domList
-
 /**
  * Given a tree of DOM elements, creates a new list of anchors which point to
  * the DOM elements.
@@ -123,3 +121,5 @@ function defaultGetAnchor (el) {
 
   return a
 }
+
+export default domList

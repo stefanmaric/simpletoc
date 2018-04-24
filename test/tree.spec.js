@@ -1,5 +1,7 @@
-const { test } = require('tap')
-const tree = require('../src/lib/tree.js')
+import tap from 'tap'
+import tree from '../src/lib/tree'
+
+const { test } = tap
 
 function lexHeadingCompare (current, next) {
   // In HTML, h1 is semantically greater than h2,

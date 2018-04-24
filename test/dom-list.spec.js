@@ -1,6 +1,8 @@
-const domList = require('../src/lib/dom-list.js')
-const jsdom = require('jsdom')
-const { test } = require('tap')
+import jsdom from 'jsdom'
+import tap from 'tap'
+import domList from '../src/lib/dom-list'
+
+const { test } = tap
 
 // Prepare environment for DOM testing
 const dom = new jsdom.JSDOM()

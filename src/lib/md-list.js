@@ -1,5 +1,3 @@
-module.exports = mdList
-
 /**
  * Given a tree of markdown headings, creates a markdown list of references that
  * point to those headings.
@@ -113,3 +111,5 @@ function defaultGetRef (text) {
     .replace(/[^\w\- ]+/g, '')
     .replace(/\s/g, '-')
 }
+
+export default mdList
