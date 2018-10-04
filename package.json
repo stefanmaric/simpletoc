@@ -49,6 +49,7 @@
     "url": "https://github.com/stefanmaric/simpletoc.git"
   },
   "scripts": {
+    "prebuild-file": "mkdir -p dist/",
     "build-file": "f(){ BN=$(basename $1 .js); rollup -c rollup.config.js -f umd -n simpletoc $1 | tee dist/$BN.umd.js | babel-minify > dist/$BN.umd.min.js; }; f",
     "build": "for file in src/*.js; do npm run build-file -- $file; done",
     "docs": "documentation build --config .documentation.yml -f html -o _docs src/",

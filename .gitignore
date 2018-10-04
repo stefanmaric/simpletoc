@@ -14,5 +14,6 @@ coverage/
 # Dependency directories
 node_modules/
 
-# Generated docs folder
+# Generated files
+dist/
 _docs/
