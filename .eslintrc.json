@@ -1,10 +1,19 @@
 {
-  "extends": [
-    "airbnb-base",
-    "standard"
-  ],
+  "extends": ["airbnb-base"],
+  "parser": "babel-eslint",
   "root": true,
   "rules": {
+    "arrow-parens": ["error", "always"],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
     "max-len": [
       "error",
       80,
@@ -16,6 +25,18 @@
         "ignoreTemplateLiterals": true,
         "ignoreUrls": true
       }
-    ]
+    ],
+    "implicit-arrow-linebreak": "off",
+    "operator-linebreak": [
+      "error",
+      "after",
+      {
+        "overrides": {
+          "?": "before",
+          ":": "before"
+        }
+      }
+    ],
+    "semi": ["error", "never"]
   }
 }
