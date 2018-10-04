@@ -9,7 +9,7 @@ test('mdList should generate a markdown list given a tree', (t) => {
   const expected = [
     '1. [First](#first)',
     '2. [Second](#second)',
-    '3. [Third](#third)'
+    '3. [Third](#third)',
   ].join('\n')
 
   const result = mdList(src)
@@ -24,7 +24,7 @@ test('mdList should create nested list if the tree is nested', (t) => {
   const expected = [
     '1. [First](#first)',
     '    1. [Second](#second)',
-    '        1. [Third](#third)'
+    '        1. [Third](#third)',
   ].join('\n')
 
   const result = mdList(src)
@@ -39,7 +39,7 @@ test('mdList should use bullets if the type is ul', (t) => {
   const expected = [
     '* [First](#first)',
     '* [Second](#second)',
-    '* [Third](#third)'
+    '* [Third](#third)',
   ].join('\n')
 
   const result = mdList(src, { type: 'ul' })

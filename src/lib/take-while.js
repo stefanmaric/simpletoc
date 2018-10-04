@@ -19,7 +19,7 @@
  * takeWhile(u => !u.active, users)
  * // => [{ user: 'john', active: false }, { user: 'mike', active: false }]
  */
-function takeWhile (fn, arr, i = 0) {
+function takeWhile(fn, arr, i = 0) {
   return i < arr.length && fn(arr[i], i, arr)
     ? takeWhile(fn, arr, i + 1)
     : arr.slice(0, i)

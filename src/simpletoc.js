@@ -5,9 +5,5 @@ import mdToc from './lib/md-toc'
 import tree from './lib/tree'
 
 export {
-  domList,
-  domToc,
-  mdList,
-  mdToc,
-  tree
+  domList, domToc, mdList, mdToc, tree,
 }

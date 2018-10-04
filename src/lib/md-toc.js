@@ -54,11 +54,11 @@ import tree from './tree'
  * // End.
  * // "
  */
-function mdToc (text, options = {}) {
+function mdToc(text, options = {}) {
   const {
     compare = defaultCompare,
     extract = defaultExtract,
-    target = /^TOC$/m
+    target = /^TOC$/m,
   } = options
 
   return text.replace(target, mdList(tree(extract(text), compare), options))
@@ -94,7 +94,7 @@ function mdToc (text, options = {}) {
  * defaultExtract(mdText, /^##+ .*$/gm)
  * // => [ "## Second" ]
  */
-function defaultExtract (text, pattern = /^#+ .*$/gm) {
+function defaultExtract(text, pattern = /^#+ .*$/gm) {
   // Strip code blocks away,
   // because bash-style comments can be treated as headings
   return text.replace(/```[\S\s]+?```/g, '').match(pattern) || []
@@ -117,7 +117,7 @@ function defaultExtract (text, pattern = /^#+ .*$/gm) {
  * defaultCompare('### Heading 1', '# Heading 2')
  * // => false
  */
-function defaultCompare (current, next) {
+function defaultCompare(current, next) {
   const pattern = /^#+/
   return next.match(pattern)[0] > current.match(pattern)[0]
 }

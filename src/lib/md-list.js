@@ -39,11 +39,11 @@
  * //     * [Fourth](#fourth)
  * //         * [Fifth](#fifth)"
  */
-function mdList (tree, options = {}, depth = 0) {
+function mdList(tree, options = {}, depth = 0) {
   const {
     getRef = defaultGetRef,
     getText = defaultGetText,
-    type = 'ol'
+    type = 'ol',
   } = options
 
   return tree
@@ -81,7 +81,7 @@ function mdList (tree, options = {}, depth = 0) {
  * defaultGetText('## This is [a link](http://example.com) inside a heading')
  * // => "This is a link inside a heading"
  */
-function defaultGetText (line) {
+function defaultGetText(line) {
   // Strip away the heading markup,
   // and also strip away any link markup because nested links are not possible
   return line.replace(/^#+ +/, '').replace(/\[(.+?)\]\(.+?\)/, '$1')
@@ -103,7 +103,7 @@ function defaultGetText (line) {
  * defaultGetRef('This is a heading text with $ sign and ! mark.')
  * // => "this-is-a-heading-text-with--sign-and--mark"
  */
-function defaultGetRef (text) {
+function defaultGetRef(text) {
   // This pretty much matches how github generates its headings references
   return text
     .trim()

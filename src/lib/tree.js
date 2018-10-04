@@ -28,7 +28,7 @@ import takeWhile from './take-while'
  * tree(levels, comparator)
  * // => [ [ 5, [ [ 3, [ [ 2 ] ] ] ] ], [ 5, [ [ 4 ] ] ] ]
  */
-function tree ([current, ...rest], fn) {
+function tree([current, ...rest], fn) {
   const children = takeWhile(fn.bind(null, current), rest)
   const result = children.length ? [current, tree(children, fn)] : [current]
 

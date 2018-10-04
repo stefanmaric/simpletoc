@@ -29,21 +29,23 @@ import domList from './dom-list'
  * //      <li><a href="#3">Third</a></li>
  * //    </ol>
  */
-function domToc (options = {}) {
+function domToc(options = {}) {
   const {
     compare = (current, next) => next.tagName > current.tagName,
     root = 'body',
     selector = 'h1,h2,h3,h4,h5,h6',
-    target = '[simpletoc]'
+    target = '[simpletoc]',
   } = options
 
-  return removeChildren(document.querySelector(target)).appendChild(domList(
-    tree(
-      Array.from(document.querySelector(root).querySelectorAll(selector)),
-      compare
-    ),
-    options
-  ))
+  return removeChildren(document.querySelector(target)).appendChild(
+    domList(
+      tree(
+        Array.from(document.querySelector(root).querySelectorAll(selector)),
+        compare
+      ),
+      options
+    )
+  )
 }
 
 /**
@@ -55,7 +57,7 @@ function domToc (options = {}) {
  * @param {HTMLElement} el The DOM element.
  * @return {HTMLElement} The input DOM element without children.
  */
-function removeChildren (el) {
+function removeChildren(el) {
   while (el.lastChild) el.removeChild(el.lastChild)
   return el
 }

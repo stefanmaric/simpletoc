@@ -3,7 +3,7 @@ import tree from '../src/lib/tree'
 
 const { test } = tap
 
-function lexHeadingCompare (current, next) {
+function lexHeadingCompare(current, next) {
   // In HTML, h1 is semantically greater than h2,
   // but h2 is lexicographically greater than h1
   //

@@ -10,7 +10,7 @@ const dom = new jsdom.JSDOM()
 global.window = dom.window
 global.document = dom.window.document
 
-function createFragment (html) {
+function createFragment(html) {
   return jsdom.JSDOM.fragment(html).firstChild
 }
 
@@ -18,9 +18,9 @@ test('domList should convert a tree of DOM elements into an HTML ordered list', 
   const tree = [
     [
       createFragment('<h1 id="1">First</h1>'),
-      [[createFragment('<h2 id="2">Second</h2>')]]
+      [[createFragment('<h2 id="2">Second</h2>')]],
     ],
-    [createFragment('<h1 id="3">Third</h1>')]
+    [createFragment('<h1 id="3">Third</h1>')],
   ]
 
   const expected =
@@ -36,7 +36,7 @@ test('domList should generate ids for elements that does not have it already', (
   const tree = [
     [createFragment('<h1>First</h1>')],
     [createFragment('<h2>Second</h2>')],
-    [createFragment('<h1>Third</h1>')]
+    [createFragment('<h1>Third</h1>')],
   ]
 
   const expected =

@@ -37,12 +37,12 @@
  * //      <li><a href="#3">Third</a></li>
  * //    </ol>
  */
-function domList (tree, options = {}) {
+function domList(tree, options = {}) {
   const {
     type = 'ol',
     className = 'simpletoc',
     getId = defaultGetId,
-    getAnchor = defaultGetAnchor
+    getAnchor = defaultGetAnchor,
   } = options
 
   const list = document.createElement(type)
@@ -91,7 +91,7 @@ function domList (tree, options = {}) {
  * defaultGetId(heading)
  * // => "custom-id"
  */
-function defaultGetId (el) {
+function defaultGetId(el) {
   return el.id ? el.id : el.textContent.toLowerCase().replace(/\s+/g, '-')
 }
 
@@ -113,7 +113,7 @@ function defaultGetId (el) {
  * defaultGetAnchor(heading)
  * // => <a href="#custom-id">This is a Heading</a>
  */
-function defaultGetAnchor (el) {
+function defaultGetAnchor(el) {
   const a = document.createElement('a')
 
   a.href = `#${el.id}`
