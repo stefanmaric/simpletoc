@@ -3,6 +3,15 @@ Changelog
 
 ## Unreleased
 
+- Upgrade build stack
+- Replace standard with prettier
+- Build only UMD files
+- Remove dist files from repo
+  * jsdelivr.com and unpkg.com are good enough
+  * TODO: update README after release
+- Format code with prettier
+- Add CHANGELOG
+
 
 ## v0.6.0 - 2018-03-05
 
