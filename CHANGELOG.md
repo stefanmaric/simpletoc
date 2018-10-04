@@ -3,6 +3,8 @@ Changelog
 
 ## Unreleased
 
+- Upgrade `documentation` to 9.0.0 alpha to support babel7
+
 
 ## v0.7.0 - 2018-10-04
 
