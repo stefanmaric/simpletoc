@@ -3,6 +3,9 @@ Changelog
 
 ## Unreleased
 
+
+## v0.7.0 - 2018-10-04
+
 - Upgrade build stack
 - Replace standard with prettier
 - Build only UMD files
