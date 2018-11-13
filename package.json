@@ -15,7 +15,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "esm": "^3.0.84",
     "gh-pages": "^2.0.0",
-    "jsdom": "^12.1.0",
+    "jsdom": "^13.0.0",
     "prettier-eslint-cli": "^4.7.1",
     "rollup": "^0.66.4",
     "rollup-plugin-babel": "^4.0.3",
