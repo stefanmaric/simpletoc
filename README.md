@@ -40,6 +40,7 @@ simpletoc.mdToc(markdownText, {
 })
 ```
 
+
 ## Why?
 
 I needed to generate a table of contents and all I found was kind of overkill or bulked.
@@ -51,7 +52,7 @@ I needed to generate a table of contents and all I found was kind of overkill or
 $ npm install simpletoc
 ```
 
-Or grab a copy from the `dist/` folder – there's no CDN available at the moment.
+Or use a CDN like [jsDelivr](https://www.jsdelivr.com/package/npm/simpletoc).
 
 
 ## Some alternatives
