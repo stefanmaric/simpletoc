@@ -7,6 +7,7 @@ Changelog
   * Upgrade `documentation` to 9.0.0 to support babel7
   * Upgrade all other dependencies
 - Use minified build for the browsers via the `browser` field
+- Fix eslint errors introduced with recent dep upgrade
 
 
 ## v0.7.0 - 2018-10-04

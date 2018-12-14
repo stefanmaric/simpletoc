@@ -2,6 +2,64 @@ import mdList from './md-list'
 import tree from './tree'
 
 /**
+ * Extract headings from a markdown text.
+ *
+ * @static
+ * @memberof mdToc
+ * @param {string} text Markdown text.
+ * @param {RegExp} [pattern] Regex to search for headings.
+ * @return {Array} Array of headings found in `text`.
+ * @example
+ *
+ * const mdText = `
+ * # First
+ *
+ * Bla bla Bla.
+ *
+ * ## Second
+ *
+ * Bla.
+ *
+ * # Third
+ *
+ * End.
+ * `
+ *
+ * defaultExtract(mdText)
+ * // => [ "# First", "## Second", "# Third" ]
+ *
+ * defaultExtract(mdText, /^##+ .*$/gm)
+ * // => [ "## Second" ]
+ */
+function defaultExtract(text, pattern = /^#+ .*$/gm) {
+  // Strip code blocks away,
+  // because bash-style comments can be treated as headings
+  return text.replace(/```[\S\s]+?```/g, '').match(pattern) || []
+}
+
+/**
+ * Compare two markdown headings.
+ *
+ * @static
+ * @memberof mdToc
+ * @param {string} current First markdown heading
+ * @param {string} next Second markdown heading
+ * @return {boolean} true if `next` has lower hierarchy than `current`, false
+ * otherwise.
+ * @example
+ *
+ * defaultCompare('# Heading 1', '## Heading 2')
+ * // => true
+ *
+ * defaultCompare('### Heading 1', '# Heading 2')
+ * // => false
+ */
+function defaultCompare(current, next) {
+  const pattern = /^#+/
+  return next.match(pattern)[0] > current.match(pattern)[0]
+}
+
+/**
  * Handy function to automagically generate a table of contents for a markdown
  * document.
  *
@@ -62,64 +120,6 @@ function mdToc(text, options = {}) {
   } = options
 
   return text.replace(target, mdList(tree(extract(text), compare), options))
-}
-
-/**
- * Extract headings from a markdown text.
- *
- * @static
- * @memberof mdToc
- * @param {string} text Markdown text.
- * @param {RegExp} [pattern] Regex to search for headings.
- * @return {Array} Array of headings found in `text`.
- * @example
- *
- * const mdText = `
- * # First
- *
- * Bla bla Bla.
- *
- * ## Second
- *
- * Bla.
- *
- * # Third
- *
- * End.
- * `
- *
- * defaultExtract(mdText)
- * // => [ "# First", "## Second", "# Third" ]
- *
- * defaultExtract(mdText, /^##+ .*$/gm)
- * // => [ "## Second" ]
- */
-function defaultExtract(text, pattern = /^#+ .*$/gm) {
-  // Strip code blocks away,
-  // because bash-style comments can be treated as headings
-  return text.replace(/```[\S\s]+?```/g, '').match(pattern) || []
-}
-
-/**
- * Compare two markdown headings.
- *
- * @static
- * @memberof mdToc
- * @param {string} current First markdown heading
- * @param {string} next Second markdown heading
- * @return {boolean} true if `next` has lower hierarchy than `current`, false
- * otherwise.
- * @example
- *
- * defaultCompare('# Heading 1', '## Heading 2')
- * // => true
- *
- * defaultCompare('### Heading 1', '# Heading 2')
- * // => false
- */
-function defaultCompare(current, next) {
-  const pattern = /^#+/
-  return next.match(pattern)[0] > current.match(pattern)[0]
 }
 
 export default mdToc

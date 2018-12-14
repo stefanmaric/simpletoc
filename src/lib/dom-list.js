@@ -1,3 +1,60 @@
+/* globals document */
+
+/**
+ * Given an DOM element, returns its id or generates one based on its
+ * textContent.
+ *
+ * @static
+ * @protected
+ * @memberof domList
+ * @param {HTMLElement} el The DOM element.
+ * @returns {string} An id.
+ * @example
+ *
+ * const heading = document
+ *   .createRange()
+ *   .createContextualFragment('<h1>This is a Heading</h1>')
+ *   .firstElementChild
+ *
+ * defaultGetId(heading)
+ * //=> "this-is-a-heading"
+ *
+ * heading.id = 'custom-id'
+ *
+ * defaultGetId(heading)
+ * // => "custom-id"
+ */
+function defaultGetId(el) {
+  return el.id ? el.id : el.textContent.toLowerCase().replace(/\s+/g, '-')
+}
+
+/**
+ * Given an DOM element, returns a new anchor element that points to `el`'s id.
+ *
+ * @static
+ * @protected
+ * @memberof domList
+ * @param {HTMLElement} el The DOM element.
+ * @returns {HTMLElement} A new anchor element.
+ * @example
+ *
+ * const heading = document
+ *   .createRange()
+ *   .createContextualFragment('<h1 id="custom-id">This is a Heading</h1>')
+ *   .firstElementChild
+ *
+ * defaultGetAnchor(heading)
+ * // => <a href="#custom-id">This is a Heading</a>
+ */
+function defaultGetAnchor(el) {
+  const a = document.createElement('a')
+
+  a.href = `#${el.id}`
+  a.textContent = el.textContent
+
+  return a
+}
+
 /**
  * Given a tree of DOM elements, creates a new list of anchors which point to
  * the DOM elements.
@@ -65,61 +122,6 @@ function domList(tree, options = {}) {
 
     return acc
   }, list)
-}
-
-/**
- * Given an DOM element, returns its id or generates one based on its
- * textContent.
- *
- * @static
- * @protected
- * @memberof domList
- * @param {HTMLElement} el The DOM element.
- * @returns {string} An id.
- * @example
- *
- * const heading = document
- *   .createRange()
- *   .createContextualFragment('<h1>This is a Heading</h1>')
- *   .firstElementChild
- *
- * defaultGetId(heading)
- * //=> "this-is-a-heading"
- *
- * heading.id = 'custom-id'
- *
- * defaultGetId(heading)
- * // => "custom-id"
- */
-function defaultGetId(el) {
-  return el.id ? el.id : el.textContent.toLowerCase().replace(/\s+/g, '-')
-}
-
-/**
- * Given an DOM element, returns a new anchor element that points to `el`'s id.
- *
- * @static
- * @protected
- * @memberof domList
- * @param {HTMLElement} el The DOM element.
- * @returns {HTMLElement} A new anchor element.
- * @example
- *
- * const heading = document
- *   .createRange()
- *   .createContextualFragment('<h1 id="custom-id">This is a Heading</h1>')
- *   .firstElementChild
- *
- * defaultGetAnchor(heading)
- * // => <a href="#custom-id">This is a Heading</a>
- */
-function defaultGetAnchor(el) {
-  const a = document.createElement('a')
-
-  a.href = `#${el.id}`
-  a.textContent = el.textContent
-
-  return a
 }
 
 export default domList

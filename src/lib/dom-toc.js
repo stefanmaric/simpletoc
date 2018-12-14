@@ -1,5 +1,21 @@
+/* globals document */
+
 import tree from './tree'
 import domList from './dom-list'
+
+/**
+ * Remove all children of `el` and return it.
+ *
+ * @static
+ * @private
+ * @memberof domToc
+ * @param {HTMLElement} el The DOM element.
+ * @return {HTMLElement} The input DOM element without children.
+ */
+function removeChildren(el) {
+  while (el.lastChild) el.removeChild(el.lastChild)
+  return el
+}
 
 /**
  * Handy function to automagically generate a table of contents based on the
@@ -46,20 +62,6 @@ function domToc(options = {}) {
       options
     )
   )
-}
-
-/**
- * Remove all children of `el` and return it.
- *
- * @static
- * @private
- * @memberof domToc
- * @param {HTMLElement} el The DOM element.
- * @return {HTMLElement} The input DOM element without children.
- */
-function removeChildren(el) {
-  while (el.lastChild) el.removeChild(el.lastChild)
-  return el
 }
 
 export default domToc
