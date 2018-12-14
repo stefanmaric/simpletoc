@@ -9,6 +9,7 @@ Changelog
 - Use minified build for the browsers via the `browser` field
 - Fix eslint errors introduced with recent dep upgrade
 - Add note about using CDNs to README
+- Add files field to package.json to reduce module size
 
 
 ## v0.7.0 - 2018-10-04

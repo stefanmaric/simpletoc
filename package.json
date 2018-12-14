@@ -29,6 +29,10 @@
       ".nyc-output/**"
     ]
   },
+  "files": [
+    "dist/**/*",
+    "src/**/*"
+  ],
   "homepage": "http://stefanmaric.com/simpletoc/",
   "keywords": [
     "table of contents",
