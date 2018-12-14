@@ -62,5 +62,5 @@
     "publish-docs": "npm run docs && gh-pages --dist _docs",
     "test": "npm run lint && tap --cov --nyc-arg=-i --nyc-arg=esm 'test/**/*.js'"
   },
-  "version": "0.7.0"
+  "version": "0.8.0"
 }

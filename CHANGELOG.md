@@ -3,6 +3,9 @@ Changelog
 
 ## Unreleased
 
+
+## v0.8.0 - 2018-12-14
+
 - Upgrade dev-dependencies
   * Upgrade `documentation` to 9.0.0 to support babel7
   * Upgrade all other dependencies
