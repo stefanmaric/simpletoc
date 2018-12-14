@@ -40,7 +40,7 @@
     "md"
   ],
   "license": "MIT",
-  "browser": "dist/simpletoc.umd.js",
+  "browser": "dist/simpletoc.umd.min.js",
   "main": "dist/simpletoc.umd.js",
   "module": "src/simpletoc.js",
   "name": "simpletoc",
