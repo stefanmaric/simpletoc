@@ -3,6 +3,9 @@ Changelog
 
 ## Unreleased
 
+
+## v1.0.0 - 2019-01-09
+
 - Mark module as side-effects free
 - Upgrade all dev-dependencies
 - Add browserlist config file
