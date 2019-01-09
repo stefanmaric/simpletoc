@@ -6,6 +6,8 @@ Changelog
 - Mark module as side-effects free
 - Upgrade all dev-dependencies
 - Add browserlist config file
+- Add missing domToc tests
+
 
 ## v0.8.0 - 2018-12-14
 

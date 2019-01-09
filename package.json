@@ -26,7 +26,8 @@
       "coverage/**",
       "dist/**",
       "_docs/**",
-      ".nyc-output/**"
+      ".nyc-output/**",
+      "test/fixtures/**"
     ]
   },
   "files": [
