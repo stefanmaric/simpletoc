@@ -62,6 +62,7 @@
     "lint": "echint && eslint . && documentation lint src/",
     "prettier": "prettier-eslint --write '{src,test}/**/*.{js,json}'",
     "publish-docs": "npm run docs && gh-pages --dist _docs",
+    "prepack": "npm run build",
     "test": "npm run lint && tap --cov --nyc-arg=-i --nyc-arg=esm 'test/**/*.js'"
   },
   "version": "0.8.0"

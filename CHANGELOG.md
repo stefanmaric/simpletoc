@@ -7,6 +7,7 @@ Changelog
 - Upgrade all dev-dependencies
 - Add browserlist config file
 - Add missing domToc tests
+- Configure project to build before pack/publish
 
 
 ## v0.8.0 - 2018-12-14
