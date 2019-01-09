@@ -5,6 +5,7 @@ Changelog
 
 - Mark module as side-effects free
 - Upgrade all dev-dependencies
+- Add browserlist config file
 
 ## v0.8.0 - 2018-12-14
 
