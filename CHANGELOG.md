@@ -3,6 +3,7 @@ Changelog
 
 ## Unreleased
 
+- Mark module as side-effects free
 
 ## v0.8.0 - 2018-12-14
 
