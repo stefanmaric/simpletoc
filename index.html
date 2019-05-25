@@ -3,12 +3,12 @@
 <head>
   <meta charset='utf-8' />
   <title>simpletoc 1.0.0 | Documentation</title>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
-  <link href='assets/style.css' type='text/css' rel='stylesheet' />
-  <link href='assets/github.css' type='text/css' rel='stylesheet' />
-  <link href='assets/split.css' type='text/css' rel='stylesheet' />
   <meta name='description' content='Simple Table of Contents generator for DOM and Markdown'>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' rel='stylesheet' />
+  <link href='assets/style.css' rel='stylesheet' />
+  <link href='assets/github.css' rel='stylesheet' />
+  <link href='assets/split.css' rel='stylesheet' />
 </head>
 <body class='documentation m0'>
     <div class='flex'>
@@ -232,102 +232,6 @@ transpiled with babel and target is defined in the <a href="./.browserslistrc"><
   </section>
 </div>
           
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='simpletoc'>
-      simpletoc
-    </h3>
-    
-    
-  </div>
-  
-
-  <h1>simpletoc</h1>
-<p>Simple Table of Contents generator for DOM and Markdown. 1.5kb</p>
-<p><a href="./LICENSE"><img src="https://img.shields.io/github/license/stefanmaric/simpletoc.svg" alt="license"></a>
-<a href="https://travis-ci.org/stefanmaric/simpletoc"><img src="https://img.shields.io/travis/stefanmaric/simpletoc.svg" alt="Travis"></a>
-<a href="https://coveralls.io/github/stefanmaric/simpletoc"><img src="https://img.shields.io/coveralls/stefanmaric/simpletoc.svg" alt="Coveralls"></a>
-<a href="https://www.npmjs.com/package/simpletoc"><img src="https://img.shields.io/npm/v/simpletoc.svg" alt="npm"></a>
-<a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/stefanmaric/simpletoc.svg" alt="Greenkeeper badge"></a>
-<a href="https://www.npmjs.com/package/simpletoc"><img src="https://img.shields.io/npm/dt/simpletoc.svg" alt="npm"></a>
-<a href="https://github.com/stefanmaric/simpletoc/stargazers"><img src="https://img.shields.io/github/stars/stefanmaric/simpletoc.svg?style=flat-square" alt="GitHub stars"></a></p>
-<h2>Quick dive</h2>
-<h3>For the DOM</h3>
-<pre class='hljs'>simpletoc.domToc({
-  <span class="hljs-comment">// Only search for content in a specific place.</span>
-  root: <span class="hljs-string">'.content'</span>,
-  <span class="hljs-comment">// Only use headings from 1 to 3 levels.</span>
-  selector: <span class="hljs-string">'h1, h2, h3'</span>,
-  <span class="hljs-comment">// Where to place the generated Table of Contents.</span>
-  target: <span class="hljs-string">'.table-of-contents-placeholder'</span>,
-  <span class="hljs-comment">// Use an unordered list (bullet list, no numbers).</span>
-  type: <span class="hljs-string">'ul'</span>,
-})</pre>
-<h3>For Markdown</h3>
-<pre class='hljs'>simpletoc.mdToc(markdownText, {
-  <span class="hljs-comment">// Place to inject the generated table of contents.</span>
-  target: <span class="hljs-regexp">/Table of contents here/</span>,
-  <span class="hljs-comment">// Use an unordered list (bullet list, no numbers).</span>
-  type: <span class="hljs-string">'ul'</span>,
-})</pre>
-<h2>Why?</h2>
-<p>I needed to generate a table of contents and all I found was kind of overkill or bulked.</p>
-<h2>Install</h2>
-<pre class='hljs'><span class="hljs-meta">$</span><span class="bash"> npm install simpletoc</span></pre>
-<p>Or use a CDN like <a href="https://www.jsdelivr.com/package/npm/simpletoc">jsDelivr</a>.</p>
-<h2>Browser support</h2>
-<p><code>simpletoc</code> should work in every major browser and every node.js LTS version. Distribution files are
-transpiled with babel and target is defined in the <a href="./.browserslistrc"><code>.browserlistrc</code> file</a>.
-<a href="https://browserl.ist/?q=%3E1%25%2C+not+op_mini+all%2C+not+dead">See the list of browsers here</a>.</p>
-<h2>Some alternatives</h2>
-<ul>
-<li><a href="https://github.com/gajus/contents">https://github.com/gajus/contents</a></li>
-<li><a href="https://github.com/jgallen23/toc">https://github.com/jgallen23/toc</a></li>
-<li><a href="https://github.com/gfranko/jquery.tocify.js">https://github.com/gfranko/jquery.tocify.js</a></li>
-<li><a href="https://github.com/tscanlin/tocbot">https://github.com/tscanlin/tocbot</a></li>
-<li><a href="https://github.com/n1k0/toctoc">https://github.com/n1k0/toctoc</a></li>
-<li><a href="https://github.com/aslushnikov/table-of-contents-preprocessor">https://github.com/aslushnikov/table-of-contents-preprocessor</a></li>
-<li><a href="https://github.com/Oktavilla/markdown-it-table-of-contents">https://github.com/Oktavilla/markdown-it-table-of-contents</a></li>
-<li><a href="https://github.com/gajus/markdown-contents">https://github.com/gajus/markdown-contents</a></li>
-<li><a href="https://github.com/thlorenz/doctoc">https://github.com/thlorenz/doctoc</a></li>
-</ul>
-<h2>Contributing</h2>
-<p>Please read <a href="./CONTRIBUTING.md">CONTRIBUTING.md</a>. ♥</p>
-<h2>License</h2>
-<p><a href="./LICENSE">MIT</a> ♥</p>
-
- 
-   
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
         
           
           <section class='p2 mb2 clearfix bg-white minishadow'>
@@ -346,10 +250,7 @@ transpiled with babel and target is defined in the <a href="./.browserslistrc"><
   <p>Given a tree of DOM elements, creates a new list of anchors which point to
 the DOM elements.</p>
 
- 
-  
     <div class='pre p1 fill-light mt0'>domList(tree: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?): <a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></div>
-   
   
   
 
@@ -506,10 +407,7 @@ domList(tree)
   <p>Given an DOM element, returns its id or generates one based on its
 textContent.</p>
 
- 
-  
     <div class='pre p1 fill-light mt0'>defaultGetId(el: <a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
-   
   
   
 
@@ -574,6 +472,8 @@ defaultGetId(heading)
   
 
   
+
+  
 </section>
 
       </div>
@@ -593,10 +493,7 @@ defaultGetId(heading)
 
   <p>Given an DOM element, returns a new anchor element that points to <code>el</code>'s id.</p>
 
- 
-  
     <div class='pre p1 fill-light mt0'>defaultGetAnchor(el: <a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a>): <a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></div>
-   
   
   
 
@@ -656,6 +553,8 @@ defaultGetAnchor(heading)
   
 
   
+
+  
 </section>
 
       </div>
@@ -668,8 +567,11 @@ defaultGetAnchor(heading)
   
 
   
+
+  
 </section>
 
+          
         
           
           <section class='p2 mb2 clearfix bg-white minishadow'>
@@ -689,10 +591,7 @@ defaultGetAnchor(heading)
 document and (optional) CSS selectors, and attach it somewhere in the DOM
 (by default to an element with the "simpletoc" attribute).</p>
 
- 
-  
     <div class='pre p1 fill-light mt0'>domToc(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?): <a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></div>
-   
   
   
 
@@ -819,8 +718,11 @@ element where the TOC is going to be attached.
   
 
   
+
+  
 </section>
 
+          
         
           
           <section class='p2 mb2 clearfix bg-white minishadow'>
@@ -839,10 +741,7 @@ element where the TOC is going to be attached.
   <p>Given a tree of markdown headings, creates a markdown list of references that
 point to those headings.</p>
 
- 
-  
     <div class='pre p1 fill-light mt0'>mdList(tree: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?, depth: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
-   
   
   
 
@@ -1000,10 +899,7 @@ mdList(tree, { <span class="hljs-attr">type</span>: <span class="hljs-string">'u
   <p>Given a line representing a markdown heading, returns its text ready for use
 as a reference text.</p>
 
- 
-  
     <div class='pre p1 fill-light mt0'>defaultGetText(line: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
-   
   
   
 
@@ -1061,6 +957,8 @@ defaultGetText(<span class="hljs-string">'## This is [a link](http://example.com
   
 
   
+
+  
 </section>
 
       </div>
@@ -1081,10 +979,7 @@ defaultGetText(<span class="hljs-string">'## This is [a link](http://example.com
   <p>Given a Markdown heading's text, returns a reference as generated by the
 Github Flavored Markdown.</p>
 
- 
-  
     <div class='pre p1 fill-light mt0'>defaultGetRef(text: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
-   
   
   
 
@@ -1142,6 +1037,8 @@ defaultGetRef(<span class="hljs-string">'This is a heading text with $ sign and 
   
 
   
+
+  
 </section>
 
       </div>
@@ -1154,8 +1051,11 @@ defaultGetRef(<span class="hljs-string">'This is a heading text with $ sign and 
   
 
   
+
+  
 </section>
 
+          
         
           
           <section class='p2 mb2 clearfix bg-white minishadow'>
@@ -1174,10 +1074,7 @@ defaultGetRef(<span class="hljs-string">'This is a heading text with $ sign and 
   <p>Handy function to automagically generate a table of contents for a markdown
 document.</p>
 
- 
-  
     <div class='pre p1 fill-light mt0'>mdToc(text: any, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
-   
   
   
 
@@ -1343,10 +1240,7 @@ mdToc(mdText)
 
   <p>Extract headings from a markdown text.</p>
 
- 
-  
     <div class='pre p1 fill-light mt0'>defaultExtract(text: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, pattern: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a>?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
-   
   
   
 
@@ -1430,6 +1324,8 @@ defaultExtract(mdText, /^##+ .*$/gm)
   
 
   
+
+  
 </section>
 
       </div>
@@ -1449,10 +1345,7 @@ defaultExtract(mdText, /^##+ .*$/gm)
 
   <p>Compare two markdown headings.</p>
 
- 
-  
     <div class='pre p1 fill-light mt0'>defaultCompare(current: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, next: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
-   
   
   
 
@@ -1524,6 +1417,8 @@ defaultCompare(<span class="hljs-string">'### Heading 1'</span>, <span class="hl
   
 
   
+
+  
 </section>
 
       </div>
@@ -1536,8 +1431,11 @@ defaultCompare(<span class="hljs-string">'### Heading 1'</span>, <span class="hl
   
 
   
+
+  
 </section>
 
+          
         
           
           <section class='p2 mb2 clearfix bg-white minishadow'>
@@ -1559,10 +1457,7 @@ invoked with these arguments: (current, next). If the invocation returns
 truthy, <code>next</code> will be nested into <code>current</code>, <code>next</code> will be placed at the
 same level of <code>current</code> otherwise.</p>
 
- 
-  
     <div class='pre p1 fill-light mt0'>tree(arr: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, fn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
-   
   
   
 
@@ -1670,8 +1565,11 @@ tree(levels, comparator)
   
 
   
+
+  
 </section>
 
+          
         
       </div>
     </div>
