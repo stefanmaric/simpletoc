@@ -3,7 +3,11 @@ Changelog
 
 ## Unreleased
 
+
+## v1.0.1 - 2019-05-25
+
 - Upgrade all dev-dependencies
+
 
 ## v1.0.0 - 2019-01-09
 
