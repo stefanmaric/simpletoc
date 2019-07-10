@@ -6,7 +6,7 @@
     "@babel/preset-env": "^7.4.5",
     "babel-eslint": "^10.0.1",
     "babel-minify": "^0.5.0",
-    "documentation": "^11.0.0",
+    "documentation": "^12.0.0",
     "echint": "^4.0.2",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
