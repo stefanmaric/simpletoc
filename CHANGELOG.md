@@ -3,6 +3,9 @@ Changelog
 
 ## Unreleased
 
+
+## v1.0.2 - 2019-08-02
+
 - Update build matrix to skip EOL v6 and include v10 and v12
 - Upgrade all dev-dependencies to shut down security alerts
 
