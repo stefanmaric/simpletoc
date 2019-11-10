@@ -3,6 +3,9 @@ Changelog
 
 ## Unreleased
 
+
+## v1.0.3 - 2019-11-10
+
 - Remove Greenkeeper integration
 - Upgrade all dev-dependencies
 
