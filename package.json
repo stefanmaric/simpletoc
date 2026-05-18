@@ -1,6 +1,6 @@
 {
   "name": "simpletoc",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Simple Table of Contents generator for DOM and Markdown",
   "keywords": [
     "contents",

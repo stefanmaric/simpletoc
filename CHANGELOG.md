@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## v2.0.0 - 2026-05-18
+
 - Rewrite the package in TypeScript, ship ESM-only output, and replace the legacy build/test/lint/CI stack with tsdown, Vitest, oxlint/oxfmt, pnpm, and GitHub Actions.
 - Rename the DOM heading query option from `selector` to `headings`, and allow DOM inputs such as `root`, `headings`, and `target` to accept either CSS selectors or real DOM nodes.
 - Add `domItems()` and `mdItems()` as first-class APIs that return normalized `TocItem[]` data.
