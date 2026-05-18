@@ -140,6 +140,8 @@ If you only need one side of the library, use the subpath exports:
 </script>
 ```
 
+Check the `examples/` folder for more browser examples.
+
 ## Browser support
 
 `simpletoc` targets Node.js 24+ and browsers in the current

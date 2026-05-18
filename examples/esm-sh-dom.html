@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>simpletoc via esm.sh</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      .layout {
+        box-sizing: border-box;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
+        margin: 0 auto;
+        max-width: 64rem;
+        padding: 2rem;
+      }
+
+      nav {
+        background: #f5f5f5;
+        border-radius: 0.75rem;
+        padding: 1rem;
+        position: sticky;
+        top: 1rem;
+      }
+
+      nav ol,
+      nav ul {
+        margin: 0;
+        padding-left: 1.25rem;
+      }
+
+      nav a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      article {
+        min-width: 0;
+      }
+
+      @media (max-width: 48rem) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+
+        nav {
+          position: static;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="layout">
+      <nav data-toc></nav>
+
+      <article class="content">
+        <h1>simpletoc via esm.sh</h1>
+        <p>A minimal browser example that loads the package directly from a CDN.</p>
+        <p>
+          This example intentionally includes a lot of filler content so the table of contents has
+          enough material to navigate and the sticky layout can be tested while scrolling.
+        </p>
+
+        <h2>Install</h2>
+        <p>
+          No install step is needed when loading from esm.sh. You can reference the package directly
+          from a module script and let the CDN transform the published ESM entrypoint on demand.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Sed eget sem
+          vitae lacus viverra feugiat. Integer cursus orci ac massa volutpat, a facilisis risus
+          volutpat. Nulla facilisi. Nulla tincidunt massa nec dolor aliquet, nec ullamcorper odio
+          fermentum.
+        </p>
+        <p>
+          Praesent vulputate erat in sem tempor, at sollicitudin nisl porta. Curabitur blandit,
+          sapien et auctor feugiat, nibh lectus convallis mauris, non dignissim mi massa sed est.
+          Integer iaculis posuere nibh, sit amet commodo nisi blandit quis.
+        </p>
+
+        <h2>Usage</h2>
+        <p>
+          The TOC is generated from the headings in this article. In the default setup, the package
+          queries the content root, builds a normalized heading tree, renders a nested list, and
+          mounts it into the target element.
+        </p>
+        <p>
+          Mauris quis magna eu mi luctus dapibus. Proin sit amet felis bibendum, blandit metus eu,
+          sagittis lectus. Donec ac neque erat. Ut semper, enim sit amet eleifend luctus, massa
+          felis luctus neque, sed venenatis libero justo a est.
+        </p>
+
+        <h3>Selectors</h3>
+        <p>
+          You can target content and mount points with CSS selectors. This is convenient when the
+          DOM already has stable hooks such as classes, ids, or data attributes.
+        </p>
+        <p>
+          Vivamus in mauris in neque convallis imperdiet. Cras at erat non risus facilisis interdum.
+          Vestibulum tristique, odio et pharetra bibendum, sem erat posuere risus, non dictum lacus
+          magna ut erat.
+        </p>
+
+        <h3>Elements</h3>
+        <p>
+          You can also pass real DOM elements instead of selector strings. That is handy when a page
+          is already holding references to content containers or TOC mount points.
+        </p>
+        <p>
+          Nam bibendum justo sed ex faucibus, vitae vulputate dui hendrerit. Integer a urna purus.
+          Donec congue consequat velit, vitae faucibus augue cursus in. Quisque tincidunt mi vel
+          suscipit luctus.
+        </p>
+
+        <h2>Rendering</h2>
+        <p>
+          The default renderer returns a nested ordered list, but you can swap in a custom renderer
+          when you want a richer structure such as a wrapped navigation block, collapsible sections,
+          or project-specific classes.
+        </p>
+        <p>
+          Aenean eu velit nec massa tristique pellentesque. Sed vel dui sapien. Proin gravida mattis
+          mi, in gravida justo lobortis sed. Pellentesque ut lacinia eros. Donec varius bibendum
+          tempor.
+        </p>
+
+        <h3>Default list</h3>
+        <p>
+          The default list is intentionally simple. The styling on this page comes entirely from the
+          surrounding layout rather than from the package itself.
+        </p>
+        <p>
+          Phasellus feugiat accumsan tortor, sed tristique est congue sed. Integer laoreet pretium
+          luctus. Donec nec purus et mauris sodales feugiat a quis justo. Integer suscipit velit
+          quis leo tincidunt venenatis.
+        </p>
+
+        <h3>Custom renderers</h3>
+        <p>
+          Custom renderers receive the normalized items and a small DOM context with `document`,
+          `createLink`, and `renderList`, making it possible to wrap or rearrange the generated TOC
+          without rebuilding the heading extraction logic.
+        </p>
+        <p>
+          Sed mollis, orci vitae pulvinar consectetur, erat est varius mauris, non mattis lacus nibh
+          quis risus. Integer congue blandit libero sed viverra. Nulla vitae ultrices velit.
+        </p>
+
+        <h2>Scrolling</h2>
+        <p>
+          Sticky TOCs are easiest to appreciate with a long document, so the rest of this article is
+          mostly just filler text spread across a few more sections and subsections.
+        </p>
+        <p>
+          Fusce faucibus cursus tellus, et pellentesque lorem aliquet sit amet. Praesent et arcu
+          risus. In hac habitasse platea dictumst. Nulla tempus arcu sed ante malesuada, vel
+          ullamcorper nibh porttitor.
+        </p>
+
+        <h3>Long sections</h3>
+        <p>
+          Integer ultrices risus vitae mauris consequat, sit amet consequat lectus accumsan. Donec
+          mollis at magna sed volutpat. Cras id eros massa. Integer lacinia odio sed purus interdum,
+          sit amet interdum lorem volutpat.
+        </p>
+        <p>
+          Aliquam erat volutpat. Morbi placerat nisl et lacus placerat, quis blandit tortor cursus.
+          Pellentesque posuere consequat magna, et malesuada nibh hendrerit sit amet. Maecenas sed
+          interdum nibh.
+        </p>
+
+        <h3>Deep nesting</h3>
+        <p>
+          Curabitur porta lorem vel massa bibendum tempor. Vivamus varius neque non bibendum
+          malesuada. Integer quis leo sed ipsum cursus scelerisque. Nulla facilisi. Nam tempor ex at
+          nisl bibendum convallis.
+        </p>
+
+        <h2>Output</h2>
+        <p>
+          The generated TOC is rendered into the nav on the left. Scroll the page to confirm that
+          the content is long enough to make the sticky navigation feel useful.
+        </p>
+        <p>
+          Ut luctus tincidunt tortor, sit amet porta magna condimentum nec. Nullam nec lorem a nunc
+          bibendum hendrerit. Donec laoreet condimentum mauris, nec condimentum velit tincidunt
+          quis. Integer tincidunt sem purus, nec faucibus est volutpat et.
+        </p>
+        <p>
+          Morbi tempus turpis sit amet nibh gravida, ut feugiat ligula porttitor. Donec tempor
+          libero sit amet ipsum vulputate, eu feugiat augue interdum. Cras pretium lacinia lorem, at
+          pharetra arcu accumsan et.
+        </p>
+      </article>
+    </main>
+
+    <script type="module">
+      import { domToc } from 'https://esm.sh/simpletoc/dom'
+
+      const toc = domToc({
+        root: '.content',
+        headings: 'h1, h2, h3',
+        target: '[data-toc]',
+      })
+
+      toc.classList.add('simpletoc-demo')
+    </script>
+  </body>
+</html>

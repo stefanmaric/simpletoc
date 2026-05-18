@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>simpletoc domItems + domList via esm.sh</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      .layout {
+        box-sizing: border-box;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
+        margin: 0 auto;
+        max-width: 72rem;
+        padding: 2rem;
+      }
+
+      .toc-shell {
+        background: #f5f5f5;
+        border-radius: 0.75rem;
+        padding: 1rem;
+        position: sticky;
+        top: 1rem;
+      }
+
+      .toc-shell ol,
+      .toc-shell ul {
+        margin: 0;
+        padding-left: 1.25rem;
+      }
+
+      .toc-shell a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      article {
+        min-width: 0;
+      }
+
+      @media (max-width: 48rem) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+
+        .toc-shell {
+          position: static;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="layout">
+      <aside class="toc-shell" data-toc></aside>
+
+      <article class="content">
+        <h1>Manual DOM pipeline</h1>
+        <p>
+          This example uses domItems() and domList() directly before mounting the result manually.
+        </p>
+
+        <h2>Extraction</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non turpis at turpis
+          posuere aliquam. Nulla eu tellus interdum, dictum enim quis, tempus justo.
+        </p>
+
+        <h3>Selectors</h3>
+        <p>
+          Nunc sed mauris ac libero suscipit pretium. Sed et nisl viverra, porttitor nibh at,
+          accumsan orci. Quisque dignissim velit in iaculis pretium.
+        </p>
+
+        <h3>Elements</h3>
+        <p>
+          Donec sodales felis sit amet cursus pellentesque. Donec sed arcu sed arcu convallis
+          malesuada. Mauris et mi varius, luctus tellus sed, pulvinar libero.
+        </p>
+
+        <h2>Transform</h2>
+        <p>
+          Curabitur posuere lectus nec lectus pretium pretium. Sed semper odio quis eros suscipit,
+          nec interdum nisi commodo. Integer id egestas libero.
+        </p>
+
+        <h3>Normalized items</h3>
+        <p>
+          Donec ac metus vitae enim feugiat faucibus. Praesent at interdum nibh. Suspendisse tempor
+          ligula at enim dapibus, nec molestie massa luctus.
+        </p>
+
+        <h2>Mount</h2>
+        <p>
+          Etiam vitae pellentesque odio. Integer non risus sed magna tempor eleifend. Cras nec metus
+          sed nulla volutpat blandit. Sed sed justo arcu.
+        </p>
+        <p>
+          Morbi tempus lacus in nibh posuere, eget porttitor arcu pharetra. In tempus felis ac mi
+          viverra, a aliquet lorem blandit. Sed tincidunt justo ac felis pulvinar, ac semper risus
+          pellentesque.
+        </p>
+      </article>
+    </main>
+
+    <script type="module">
+      import { domItems, domList } from 'https://esm.sh/simpletoc/dom'
+
+      const root = document.querySelector('.content')
+      const target = document.querySelector('[data-toc]')
+
+      const items = domItems({
+        root,
+        headings: root.querySelectorAll('h1, h2, h3'),
+      })
+
+      const toc = domList(items)
+      toc.classList.add('manual-pipeline')
+
+      target.replaceChildren(toc)
+    </script>
+  </body>
+</html>

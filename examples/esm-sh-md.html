@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>simpletoc mdToc via esm.sh</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      .layout {
+        box-sizing: border-box;
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin: 0 auto;
+        max-width: 80rem;
+        padding: 1.5rem;
+      }
+
+      .panel {
+        display: grid;
+        gap: 0.75rem;
+        min-width: 0;
+      }
+
+      textarea,
+      pre {
+        background: #f6f6f6;
+        border: 1px solid #ddd;
+        border-radius: 0.75rem;
+        box-sizing: border-box;
+        font:
+          0.95rem/1.45 ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Consolas,
+          monospace;
+        margin: 0;
+        min-height: 75vh;
+        padding: 1rem;
+        white-space: pre-wrap;
+        width: 100%;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      @media (max-width: 60rem) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+
+        textarea,
+        pre {
+          min-height: 40vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel">
+        <h1>simpletoc mdToc via esm.sh</h1>
+        <p>Type in the left panel and watch the generated Markdown update live.</p>
+
+        <div class="controls">
+          <label>
+            <input checked name="type" type="radio" value="ol" />
+            Ordered list
+          </label>
+
+          <label>
+            <input name="type" type="radio" value="ul" />
+            Unordered list
+          </label>
+        </div>
+
+        <textarea id="source">
+TOC
+
+# simpletoc markdown example
+
+This example uses mdToc in the browser via esm.sh.
+
+## Install
+
+No bundler is required.
+
+## Usage
+
+The output is regenerated whenever the input changes.
+
+### Ordered lists
+
+The default output uses ordered lists.
+
+### Unordered lists
+
+The radio buttons above switch the output to bullets.
+
+## Notes
+
+Only the Markdown TOC marker is replaced.
+
+### Target
+
+The default marker is a line that only contains TOC.
+
+### Live update
+
+This page re-runs mdToc on every input event.
+
+## End
+
+Done.
+</textarea
+        >
+      </section>
+
+      <section class="panel">
+        <h2>Generated output</h2>
+        <pre id="output"></pre>
+      </section>
+    </main>
+
+    <script type="module">
+      import { mdToc } from 'https://esm.sh/simpletoc/md'
+
+      const output = document.querySelector('#output')
+      const source = document.querySelector('#source')
+      const controls = document.querySelectorAll('input[name="type"]')
+
+      function render() {
+        const type = document.querySelector('input[name="type"]:checked').value
+        output.textContent = mdToc(source.value, { type })
+      }
+
+      source.addEventListener('input', render)
+
+      for (const control of controls) control.addEventListener('change', render)
+
+      render()
+    </script>
+  </body>
+</html>

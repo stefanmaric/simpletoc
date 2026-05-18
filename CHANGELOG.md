@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add examples
+
 ## v2.0.0 - 2026-05-18
 
 - Rewrite the package in TypeScript, ship ESM-only output, and replace the legacy build/test/lint/CI stack with tsdown, Vitest, oxlint/oxfmt, pnpm, and GitHub Actions.

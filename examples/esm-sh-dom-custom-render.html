@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>simpletoc custom renderer via esm.sh</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      .layout {
+        box-sizing: border-box;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
+        margin: 0 auto;
+        max-width: 72rem;
+        padding: 2rem;
+      }
+
+      article {
+        min-width: 0;
+      }
+
+      .toc-card {
+        background: linear-gradient(180deg, #f8f8ff, #f3f3f3);
+        border: 1px solid #ddd;
+        border-radius: 1rem;
+        padding: 1rem;
+        position: sticky;
+        top: 1rem;
+      }
+
+      .toc-card h2 {
+        font-size: 1rem;
+        margin: 0 0 0.75rem;
+      }
+
+      .toc-card ol {
+        margin: 0;
+        padding-left: 1.25rem;
+      }
+
+      .toc-card a {
+        color: #2d2d7a;
+        text-decoration: none;
+      }
+
+      .toc-card a:hover {
+        text-decoration: underline;
+      }
+
+      .toc-meta {
+        color: #666;
+        font-size: 0.875rem;
+        margin-bottom: 0.75rem;
+      }
+
+      @media (max-width: 48rem) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+
+        .toc-card {
+          position: static;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="layout">
+      <aside data-toc></aside>
+
+      <article class="content">
+        <h1>Custom DOM renderer</h1>
+        <p>This example wraps the generated TOC in a custom card-like navigation block.</p>
+
+        <h2>Overview</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra tincidunt nisl, non
+          malesuada lectus suscipit nec. Vivamus a nibh et dui laoreet ullamcorper.
+        </p>
+
+        <h3>Structure</h3>
+        <p>
+          Integer non sem vitae nulla faucibus tincidunt. Sed posuere mauris sed quam tristique, a
+          suscipit enim lacinia. Nullam posuere augue sed lectus pulvinar tristique.
+        </p>
+
+        <h3>Wrapping elements</h3>
+        <p>
+          Cras elementum lacinia ante, vitae efficitur lacus sodales sed. Morbi cursus, nibh non
+          feugiat luctus, dolor nunc tristique mauris, sed feugiat justo lacus vitae nulla.
+        </p>
+
+        <h2>Rendering details</h2>
+        <p>
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+          egestas. In ac velit nec ipsum varius feugiat nec vitae risus.
+        </p>
+
+        <h3>document</h3>
+        <p>
+          Maecenas molestie arcu sit amet eros luctus, at vulputate erat convallis. Curabitur ut
+          orci mi. Nulla tincidunt ipsum id risus lacinia, nec convallis sem feugiat.
+        </p>
+
+        <h3>createLink</h3>
+        <p>
+          Sed non justo feugiat, malesuada augue vel, dictum elit. Nulla at luctus turpis.
+          Suspendisse eu pulvinar eros, eget varius libero.
+        </p>
+
+        <h3>renderList</h3>
+        <p>
+          Aliquam fermentum nisl in ligula tincidunt, nec ullamcorper massa egestas. Nam in lorem a
+          nibh semper dapibus. Ut iaculis suscipit massa, sit amet pharetra velit dignissim in.
+        </p>
+
+        <h2>Scrolling</h2>
+        <p>
+          Proin interdum arcu at eros egestas, eget commodo mi eleifend. Donec ultrices posuere
+          lectus, vitae efficitur ligula bibendum ut. Sed non augue eget eros rutrum tristique.
+        </p>
+        <p>
+          Morbi porta turpis ut lorem gravida, vitae gravida lorem porta. Integer congue orci at
+          feugiat rhoncus. Integer sit amet nibh eu lacus laoreet fringilla.
+        </p>
+      </article>
+    </main>
+
+    <script type="module">
+      import { domToc } from 'https://esm.sh/simpletoc/dom'
+
+      domToc({
+        root: '.content',
+        headings: 'h1, h2, h3',
+        target: '[data-toc]',
+        render(items, { document, renderList }) {
+          const card = document.createElement('nav')
+          const title = document.createElement('h2')
+          const meta = document.createElement('p')
+
+          card.className = 'toc-card'
+          title.textContent = 'On this page'
+          meta.className = 'toc-meta'
+          meta.textContent = `${items.length} top-level section${items.length === 1 ? '' : 's'}`
+
+          card.append(title, meta, renderList(items))
+          return card
+        },
+      })
+    </script>
+  </body>
+</html>
