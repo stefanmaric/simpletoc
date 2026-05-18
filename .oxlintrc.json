@@ -1,0 +1,39 @@
+{
+  "$schema": "https://oxc.rs/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "error",
+    "perf": "error",
+    "suspicious": "error"
+  },
+  "env": {
+    "browser": true,
+    "es2022": true
+  },
+  "plugins": ["eslint", "import", "node", "oxc", "promise", "typescript", "unicorn"],
+  "options": {
+    "denyWarnings": true,
+    "reportUnusedDisableDirectives": "error",
+    "typeAware": true,
+    "typeCheck": true
+  },
+  "rules": {
+    "import/extensions": ["error", "always", { "ignorePackages": true }],
+    "import/no-cycle": "error",
+    "import/no-duplicates": "error",
+    "no-console": "error",
+    "typescript/consistent-type-imports": [
+      "error",
+      { "fixStyle": "separate-type-imports", "prefer": "type-imports" }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["test/**/*.spec.ts"],
+      "env": {
+        "node": true,
+        "vitest": true
+      },
+      "plugins": ["eslint", "import", "node", "oxc", "promise", "typescript", "unicorn", "vitest"]
+    }
+  ]
+}

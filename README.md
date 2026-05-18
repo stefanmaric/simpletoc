@@ -1,26 +1,25 @@
 # simpletoc
 
-Simple Table of Contents generator for DOM and Markdown. 1.5kb
+Simple Table of Contents generator for DOM and Markdown.
 
 [![license](https://img.shields.io/github/license/stefanmaric/simpletoc.svg)](./LICENSE)
-[![Travis](https://img.shields.io/travis/stefanmaric/simpletoc.svg)](https://travis-ci.org/stefanmaric/simpletoc)
-[![Coveralls](https://img.shields.io/coveralls/stefanmaric/simpletoc.svg)](https://coveralls.io/github/stefanmaric/simpletoc)
+[![CI](https://github.com/stefanmaric/simpletoc/actions/workflows/ci.yml/badge.svg)](https://github.com/stefanmaric/simpletoc/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/simpletoc.svg)](https://www.npmjs.com/package/simpletoc)
-[![Greenkeeper badge](https://badges.greenkeeper.io/stefanmaric/simpletoc.svg)](https://greenkeeper.io/)
 [![npm](https://img.shields.io/npm/dt/simpletoc.svg)](https://www.npmjs.com/package/simpletoc)
 [![GitHub stars](https://img.shields.io/github/stars/stefanmaric/simpletoc.svg?style=flat-square)](https://github.com/stefanmaric/simpletoc/stargazers)
-
 
 ## Quick dive
 
 ### For the DOM
 
 ```javascript
-simpletoc.domToc({
+import { domToc } from 'simpletoc'
+
+const toc = domToc({
   // Only search for content in a specific place.
   root: '.content',
   // Only use headings from 1 to 3 levels.
-  selector: 'h1, h2, h3',
+  headings: 'h1, h2, h3',
   // Where to place the generated Table of Contents.
   target: '.table-of-contents-placeholder',
   // Use an unordered list (bullet list, no numbers).
@@ -31,7 +30,9 @@ simpletoc.domToc({
 ### For Markdown
 
 ```javascript
-simpletoc.mdToc(markdownText, {
+import { mdToc } from 'simpletoc'
+
+const output = mdToc(markdownText, {
   // Place to inject the generated table of contents.
   target: /Table of contents here/,
   // Use an unordered list (bullet list, no numbers).
@@ -39,27 +40,111 @@ simpletoc.mdToc(markdownText, {
 })
 ```
 
+You can also extract and render TOC items separately:
+
+```javascript
+import { domItems, domList } from 'simpletoc'
+
+const items = domItems({
+  root: document.querySelector('.content'),
+  headings: document.querySelectorAll('.content h2, .content h3'),
+})
+
+const toc = domList(items, {
+  render(items, { document, renderList }) {
+    const nav = document.createElement('nav')
+    nav.className = 'table-of-contents'
+    nav.appendChild(renderList(items))
+    return nav
+  },
+})
+
+document.querySelector('.table-of-contents-placeholder').replaceChildren(toc)
+```
+
+Markdown items use the same normalized shape:
+
+```javascript
+import { mdItems, mdList } from 'simpletoc'
+
+const items = mdItems(markdownText)
+const toc = mdList(items, { type: 'ul' })
+```
+
+## API
+
+Main exports:
+
+- `domToc(options)`
+- `mdToc(text, options)`
+- `domItems(options)`
+- `mdItems(text, options)`
+- `domList(items, options)`
+- `mdList(items, options)`
+
+`domItems()` and `mdItems()` return normalized `TocItem[]` data:
+
+```ts
+type TocItem<TSource = unknown> = {
+  level: number
+  text: string
+  id: string
+  href: string
+  source: TSource
+  children: TocItem<TSource>[]
+}
+```
+
+DOM notes:
+
+- `root` accepts a CSS selector or an `Element`
+- `headings` accepts a CSS selector or an iterable/list of `Element`
+- `target` accepts a CSS selector or an `Element`
+- `domList()` returns the root list element, so styling can be applied directly
+- `domToc()` forwards `render` to `domList()` for custom rendering
+
+Breaking changes from v1:
+
+- `selector` was renamed to `headings`
+- `domList()` and `mdList()` now take `TocItem[]`
+- `domItems()` and `mdItems()` are the new extraction APIs
+- DOM class options and old `getId` / `getAnchor` hooks were removed in favor of `render`
 
 ## Why?
 
 I needed to generate a table of contents and all I found was kind of overkill or bulked.
 
-
 ## Install
 
 ```shell
-$ npm install simpletoc
+$ pnpm add simpletoc
 ```
 
-Or use a CDN like [jsDelivr](https://www.jsdelivr.com/package/npm/simpletoc).
+`simpletoc` is ESM-only.
 
+You can also use it straight from a CDN with [esm.sh](https://esm.sh/):
+
+```html
+<script type="module">
+  import { domToc } from 'https://esm.sh/simpletoc'
+
+  domToc()
+</script>
+```
+
+If you only need one side of the library, use the subpath exports:
+
+```html
+<script type="module">
+  import { domToc } from 'https://esm.sh/simpletoc/dom'
+</script>
+```
 
 ## Browser support
 
-`simpletoc` should work in every major browser and every node.js LTS version. Distribution files are
-transpiled with babel and target is defined in the [`.browserlistrc` file](./.browserslistrc).
-[See the list of browsers here](https://browserl.ist/?q=%3E1%25%2C+not+op_mini+all%2C+not+dead).
-
+`simpletoc` targets Node.js 24+ and browsers in the current
+[`baseline widely available`](https://browsersl.ist/#q=baseline+widely+available)
+set.
 
 ## Some alternatives
 
@@ -73,11 +158,9 @@ transpiled with babel and target is defined in the [`.browserlistrc` file](./.br
 - https://github.com/gajus/markdown-contents
 - https://github.com/thlorenz/doctoc
 
-
 ## Contributing
 
 Please read [CONTRIBUTING.md](./CONTRIBUTING.md). ♥
-
 
 ## License
 

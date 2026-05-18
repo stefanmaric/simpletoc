@@ -1,25 +1,27 @@
-Changelog
-=========
+# Changelog
 
 ## Unreleased
 
+- Rewrite the package in TypeScript, ship ESM-only output, and replace the legacy build/test/lint/CI stack with tsdown, Vitest, oxlint/oxfmt, pnpm, and GitHub Actions.
+- Rename the DOM heading query option from `selector` to `headings`, and allow DOM inputs such as `root`, `headings`, and `target` to accept either CSS selectors or real DOM nodes.
+- Add `domItems()` and `mdItems()` as first-class APIs that return normalized `TocItem[]` data.
+- Change `domList()` and `mdList()` to render normalized `TocItem[]` input instead of the old tree tuple structure.
+- Simplify DOM rendering customization by supporting `render` on both `domList()` and `domToc()`, and remove the old class-based and anchor/id renderer hooks.
+- Keep `domToc()` and `mdToc()` as public named exports, publish explicit `simpletoc`, `simpletoc/dom`, and `simpletoc/md` entry points, and move `tree()` behind the item-based APIs.
 
 ## v1.0.3 - 2019-11-10
 
 - Remove Greenkeeper integration
 - Upgrade all dev-dependencies
 
-
 ## v1.0.2 - 2019-08-02
 
 - Update build matrix to skip EOL v6 and include v10 and v12
 - Upgrade all dev-dependencies to shut down security alerts
 
-
 ## v1.0.1 - 2019-05-25
 
 - Upgrade all dev-dependencies
-
 
 ## v1.0.0 - 2019-01-09
 
@@ -29,17 +31,15 @@ Changelog
 - Add missing domToc tests
 - Configure project to build before pack/publish
 
-
 ## v0.8.0 - 2018-12-14
 
 - Upgrade dev-dependencies
-  * Upgrade `documentation` to 9.0.0 to support babel7
-  * Upgrade all other dependencies
+  - Upgrade `documentation` to 9.0.0 to support babel7
+  - Upgrade all other dependencies
 - Use minified build for the browsers via the `browser` field
 - Fix eslint errors introduced with recent dep upgrade
 - Add note about using CDNs to README
 - Add files field to package.json to reduce module size
-
 
 ## v0.7.0 - 2018-10-04
 
@@ -47,11 +47,10 @@ Changelog
 - Replace standard with prettier
 - Build only UMD files
 - Remove dist files from repo
-  * jsdelivr.com and unpkg.com are good enough
-  * TODO: update README after release
+  - jsdelivr.com and unpkg.com are good enough
+  - TODO: update README after release
 - Format code with prettier
 - Add CHANGELOG
-
 
 ## v0.6.0 - 2018-03-05
 
@@ -65,7 +64,6 @@ Changelog
 - Update package-lock
 - Re-build distribution files
 
-
 ## v0.5.0 - 2017-10-06
 
 - chore(package): update rollup to version 0.50.0
@@ -73,7 +71,6 @@ Changelog
 - Remove ignore modules from greenkeeper
 - Upgrade dependencies and fix linting errors
 - Build distribution files
-
 
 ## v0.3.2 - 2017-08-28
 
@@ -92,17 +89,14 @@ Changelog
 - Remove extra empty line in README
 - Update lock file
 
-
 ## v0.3.1 - 2017-07-15
 
 - Add missing URLs to repo badges
-
 
 ## v0.3.0 - 2017-07-15
 
 - Update distribution builds
 - Add documentationjs linter to lint script
-
 
 ## v0.2.0 - 2017-07-15
 
@@ -118,7 +112,6 @@ Changelog
 - Add docs script to generate API docs using `documentation`
 - Add publish-docs script that uses `gh-pages`
 - Add homepage to package.json
-
 
 ## v0.1.2 - 2017-07-13
 

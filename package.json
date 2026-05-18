@@ -1,69 +1,60 @@
 {
-  "author": "Stefan Maric <me@stefanmaric.com> (http://stefanmaric.com)",
+  "name": "simpletoc",
+  "version": "1.0.3",
   "description": "Simple Table of Contents generator for DOM and Markdown",
-  "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
-    "babel-eslint": "^10.0.3",
-    "babel-minify": "^0.5.1",
-    "documentation": "^12.1.3",
-    "echint": "^4.0.2",
-    "eslint": "^6.6.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "esm": "^3.2.25",
-    "gh-pages": "^2.1.1",
-    "jsdom": "^15.2.1",
-    "prettier-eslint-cli": "^5.0.0",
-    "rollup": "^1.26.4",
-    "rollup-plugin-babel": "^4.3.3",
-    "tap": "^14.9.2"
-  },
-  "echint": {
-    "ignore": [
-      "coverage/**",
-      "dist/**",
-      "_docs/**",
-      ".nyc-output/**",
-      "test/fixtures/**"
-    ]
-  },
-  "files": [
-    "dist/**/*",
-    "src/**/*"
-  ],
-  "homepage": "http://stefanmaric.com/simpletoc/",
   "keywords": [
-    "table of contents",
-    "table",
     "contents",
-    "toc",
     "dom",
     "markdown",
-    "md"
+    "md",
+    "table",
+    "table of contents",
+    "toc"
   ],
+  "homepage": "https://github.com/stefanmaric/simpletoc#readme",
   "license": "MIT",
-  "browser": "dist/simpletoc.umd.min.js",
-  "main": "dist/simpletoc.umd.js",
-  "module": "src/simpletoc.js",
-  "name": "simpletoc",
+  "author": "Stefan Maric <me@stefanmaric.com> (http://stefanmaric.com)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stefanmaric/simpletoc.git"
+    "url": "git+https://github.com/stefanmaric/simpletoc.git"
   },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
   "sideEffects": false,
-  "scripts": {
-    "prebuild-file": "mkdir -p dist/",
-    "build-file": "f(){ BN=$(basename $1 .js); rollup -c rollup.config.js -f umd -n simpletoc $1 | tee dist/$BN.umd.js | babel-minify > dist/$BN.umd.min.js; }; f",
-    "build": "for file in src/*.js; do npm run build-file -- $file; done",
-    "docs": "documentation build --config .documentation.yml -f html -o _docs src/",
-    "lint": "echint && eslint . && documentation lint src/",
-    "prettier": "prettier-eslint --write '{src,test}/**/*.{js,json}'",
-    "publish-docs": "npm run docs && gh-pages --dist _docs",
-    "prepack": "npm run build",
-    "test": "npm run lint && tap --cov --nyc-arg=-i --nyc-arg=esm 'test/**/*.js'"
+  "exports": {
+    ".": "./dist/index.js",
+    "./dom": "./dist/dom.js",
+    "./md": "./dist/md.js",
+    "./package.json": "./package.json"
   },
-  "version": "1.0.3"
+  "scripts": {
+    "build": "tsdown",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "lint": "oxlint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsgo --noEmit",
+    "prepack": "pnpm build"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/core": "^0.18.2",
+    "@types/jsdom": "28.0.3",
+    "@types/node": "25.8.0",
+    "@typescript/native-preview": "7.0.0-dev.20260515.1",
+    "jsdom": "29.1.1",
+    "oxfmt": "0.49.0",
+    "oxlint": "1.64.0",
+    "oxlint-tsgolint": "0.22.1",
+    "publint": "^0.3.21",
+    "tsdown": "0.22.0",
+    "typescript": "6.0.3",
+    "vitest": "4.1.6"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@11.1.2+sha512.415a1cc25974731e75455c1468371be74c5aa5fb7621b50d4056d222451609f11412f23fd602e6169f1e060466641f798597e1be961a10688836a67b16569499"
 }
